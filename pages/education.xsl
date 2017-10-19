@@ -21,81 +21,63 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:include href="../utilities/master.xsl"/>
+<xsl:import href="../utilities/master.xsl" />
+<xsl:include href="../utilities/_news.xsl" />
 
 <xsl:template match="data">
+	<xsl:choose>
+		<xsl:when test="$title">
+			<xsl:apply-templates select="article-education/entry" />
+		</xsl:when>
+		<xsl:otherwise>
+			<h1>YSZT!</h1>
+		</xsl:otherwise>
+	</xsl:choose>
+	
+	<xsl:call-template name="news" />
+
+</xsl:template>
+
+<xsl:template match="article-education/entry">
 	<section class="entry">
 		<article>
 			<header>
 				<h5 class="category">edukacja</h5>
-				<h1>Oddział Zielona Brama</h1>
-				<h3>Budowanie kolekcji muzealnych sztuki współczesnej na przykładzie kolekcji Muzeum Sztuki Nowoczesnej w Warszawie. Wykład Joanny Mytkowskiej.</h3>
-				<h2>10.10.2017, g. 12.00</h2>
+				<h1><xsl:value-of select="title" /></h1>
+				<h3><xsl:copy-of select="subtitle/p/node()" /></h3>
+				<h2><xsl:value-of select="date" /></h2>
 			</header>
-			<div class="gallery">
-				<img src="{$workspace}/images/tmp/mytkowska-post.png" alt=""/>
-				<p class="image-caption">Joanna Mytkowska, fot. Tadeusz Rolke</p>
-			</div>
-			<p>Powstawanie kolekcji sztuki współczesnej jest zawsze specyficznym procesem, związanym z jednej strony z bieżącymi rozpoznaniami historii sztuki, z drugiej z interpretacjami krytyków, instytucji sztuki i odbiorców. Jest to więc proces bardzo dynamiczny, podlegający stosunkowo szybkim przemianom w rytm zmian życia społecznego. Biorąc pod uwagę powyższe uwarunkowania, jak budować efektywne strategie kolekcjonowania i na jakim zespole przesłanek opierać mocne podstawy kolekcji dla instytucji publicznej? Na to pytanie postara się odpowiedzieć Joanna Mytkowska w rozmowie z Anetą Szyłak.</p>
-
-			<p>Joanna Mytkowska jest kuratorką, krytyczką sztuki. Od 2007 dyrektorka Muzeum Sztuki Nowoczesnej w Warszawie. Poprzednio pracowała jako kuratorka w Centre Pompidou w Paryżu, jest współzałożycielką Fundacji Galerii Foksal. Kuratorka wystaw: „Les promesses du passe” (Centre Pompidou, Paryż 2010), „Niezgrabne przedmioty” (MSN, Warszawa 2009), „Alina Szapocznikow. Sculpture Undone 1955–1972” (Centrum Sztuki Współczesnej WIELS w Brukseli, Hammer Museum w Los Angeles, MoMA, Nowy Jork, 2012–2013). Redaktorka publikacji: Henryk Stażewski. Ekonomia myślenia i postrzegania (2006), Edward Krasiński (1997). Kuratorka wystaw w Polsce i za granicą, m.in. „Les Inquiets. Cinq artistes sous la pression de la guerre” (Paryż 2008), „Le Nuage Magellan” (Paryż 2007), „Oskar Hansen”, „Sen Warszawy” (Warszawa 2005), „Loophole” (Cieszyn 2005), „Prym” (Zielona Góra 2004), „Akcja równoległa” (Cieszyn 2004), „Nova Popularna” (Warszawa 2003), „Spacer na koniec świata z Robertem Walserem” (Warszawa 2002).</p>
-
+			<xsl:apply-templates select="gallery-tmp" />
+			<xsl:copy-of select="post/node()" />
 		</article>
 	</section>
 
+	<xsl:apply-templates select="partners" />
+
+</xsl:template>
+
+<xsl:template match="gallery-tmp">
+	<div class="gallery">
+		<img src="{$workspace}{@path}/{filename}" alt=""/>
+		<p class="image-caption"><xsl:copy-of select="../image-caption/node()" /></p>
+	</div>
+</xsl:template>
+
+<xsl:template match="partners">
 	<section class="partners">
 		<article>
 			<h5>Partnerzy</h5>
 			<ul class="inline-list">
-				<li>
-					<img src="{$workspace}/images/tmp/mng-logo-do-postu.png" alt=""/>
-				</li>
-				<li>
-					<img src="{$workspace}/images/o_GMW-po-BW.jpg" alt=""/>
-				</li>
-				<li>
-					<img src="{$workspace}/images/tmp/nomus-logo-do-postu.png" alt=""/>
-				</li>
+				<xsl:apply-templates select="item" />
 			</ul>
 		</article>
 	</section>
+</xsl:template>
 
-	<section class="bricks-container-header">
-		<h1>Aktualności</h1>
-	</section>
-
-	<section class="bricks-container">
-
-		<article class="brick">
-			<img src="{$workspace}/images/tmp/mytkowska.png" alt="" />
-			<h1>Oddział Zielona Brama</h1>
-			<h3>Budowanie kolekcji muzealnych sztuki współczesnej na przykładzie kolekcji Muzeum Sztuki Nowoczesnej
-w Warszawie.</h3>
-			<p class="date">9.11.2017</p>
-		</article>
-
-		<article class="brick">
-			<img src="{$workspace}/images/tmp/wroblewska.png" alt="" />
-			<h1>Co to jest kolekcja Zachęty?</h1>
-			<h3>Wykład Hanny Wróblewskiej</h3>
-			<p class="date">25.10.2017, g. 12.00</p>
-		</article>
-
-		<article class="brick">
-			<img src="{$workspace}/images/tmp/suchan.png" alt="" />
-			<h1>Kolekcja sztuki: zbiór rzeczy czy doświadczeń?</h1>
-			<h3>Wykład Jarosława Suchana</h3>
-			<p class="date">10.10.2017, g. 12.00</p>
-		</article>
-
-		<article class="brick">
-			<img src="{$workspace}/images/tmp/szylak.png" alt="" />
-			<h1>Ucząc się od Aten, Kassel i Münster.</h1>
-			<h3>Wykład Anety Szyłak</h3>
-			<p class="date">10.10.2017, g. 12.00</p>
-		</article>
-	</section>
-
+<xsl:template match="partners/item">
+	<li>
+		<a href="link"><img src="{$workspace}{logo/@path}/{logo/filename}" alt=""/></a>
+	</li>
 </xsl:template>
 
 <xsl:template match="data" mode="js">

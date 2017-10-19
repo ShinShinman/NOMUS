@@ -11,6 +11,10 @@ footer {
 	.newsletter {
 		margin-bottom: 2 * $global-margin-bottom;
 
+		///// TMP /////
+		display: none;
+		///////////////
+
 		form {
 			width: grid-columns(6);
 			margin-left: auto;
@@ -53,6 +57,7 @@ footer {
 	.footer {
 		@extend .floater;
 		font-size: 12px;
+		margin-bottom: 2 * $global-margin-bottom;
 
 		.label {
 			font-weight: bold;
@@ -64,26 +69,13 @@ footer {
 		}
 
 		& > ul {
-			width: grid-columns(2);
+			width: grid-columns(4);
 			margin-right: $gutter;
 
-			&.mng {
-				width: grid-columns(3);
-
-				img {
-					width: grid-columns(1.5);
-				}
-			}
-			&.mg {
-				width: grid-columns(3);
-			}
 			&.office {
-				width: grid-columns(3);
-				margin-left: grid-columns(1) + $gutter;
 			}
 		}
 		ul:last-of-type {
-			width: grid-columns(2);
 			margin-right: 0;
 		}
 
@@ -91,5 +83,49 @@ footer {
 			width: 75%;
 			margin-top: 12px;
 		}
+	}
+
+	.logos {
+		@extend .floater;
+		font-size: 12px;
+
+		.label {
+			font-weight: bold;
+		}
+
+		& > ul {
+			width: grid-columns(3);
+			margin-right: $gutter;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			&.mng {
+				img {
+					width: 95px;
+				}
+			}
+			&.mkidn {
+				width: grid-columns(2);
+				img {
+				//width: 50%;
+				}
+			}
+			&.um {
+				width: grid-columns(2);
+			}
+			&.kd {
+				width: grid-columns(2);
+			}
+			
+		}
+
+		img {
+			width: 75%;
+			margin-top: 0.5 * $global-margin-bottom;
+
+		}
+
 	}
 }

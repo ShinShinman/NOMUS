@@ -21,58 +21,14 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:include href="../utilities/master.xsl"/>
+<xsl:import href="../utilities/master.xsl"/>
+<xsl:include href="../utilities/_highlight.xsl" />
+<xsl:include href="../utilities/_news.xsl" />
 
 <xsl:template match="data">
 
-	<section class="highlight">
-		<article>
-			<div>
-				<h3 class="subtitle">Wykład Hanny Wróblewskiej</h3>
-				<h3 class="date">25.10.2017, g. 12.00</h3>
-			</div>
-			<h1>Co to jest kolekcja Zachęty?</h1>
-
-			<h1>→</h1>
-
-		</article>
-	</section>
-
-	<section class="bricks-container-header">
-		<h1>Aktualności</h1>
-	</section>
-
-	<section class="bricks-container">
-
-		<article class="brick">
-			<img src="{$workspace}/images/tmp/mytkowska.png" alt="" />
-			<h1>Oddział Zielona Brama</h1>
-			<h3>Budowanie kolekcji muzealnych sztuki współczesnej na przykładzie kolekcji Muzeum Sztuki Nowoczesnej
-w Warszawie.</h3>
-			<p class="date">9.11.2017</p>
-		</article>
-
-		<article class="brick">
-			<img src="{$workspace}/images/tmp/wroblewska.png" alt="" />
-			<h1>Co to jest kolekcja Zachęty?</h1>
-			<h3>Wykład Hanny Wróblewskiej</h3>
-			<p class="date">25.10.2017, g. 12.00</p>
-		</article>
-
-		<article class="brick">
-			<img src="{$workspace}/images/tmp/suchan.png" alt="" />
-			<h1>Kolekcja sztuki: zbiór rzeczy czy doświadczeń?</h1>
-			<h3>Wykład Jarosława Suchana</h3>
-			<p class="date">10.10.2017, g. 12.00</p>
-		</article>
-
-		<article class="brick">
-			<img src="{$workspace}/images/tmp/szylak.png" alt="" />
-			<h1>Ucząc się od Aten, Kassel i Münster.</h1>
-			<h3>Wykład Anety Szyłak</h3>
-			<p class="date">10.10.2017, g. 12.00</p>
-		</article>
-	</section>
+	<xsl:call-template name="highlight" />
+	<xsl:call-template name="news" />
 
 </xsl:template>
 

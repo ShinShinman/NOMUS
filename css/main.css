@@ -538,7 +538,8 @@ footer {
   footer section:last-of-type {
     margin-bottom: 0 !important; }
   footer .newsletter {
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    display: none; }
     footer .newsletter form {
       width: 467px;
       margin-left: auto;
@@ -567,28 +568,39 @@ footer {
       footer .newsletter form input::-webkit-input-placeholder {
         color: white; }
   footer .footer {
-    font-size: 12px; }
+    font-size: 12px;
+    margin-bottom: 48px; }
     footer .footer .label {
       font-weight: bold; }
     footer .footer .icon {
       float: left;
       margin-right: 30px; }
     footer .footer > ul {
-      width: 135.66667px;
+      width: 301.33333px;
       margin-right: 30px; }
-      footer .footer > ul.mng {
-        width: 218.5px; }
-        footer .footer > ul.mng img {
-          width: 94.25px; }
-      footer .footer > ul.mg {
-        width: 218.5px; }
-      footer .footer > ul.office {
-        width: 218.5px;
-        margin-left: 82.83333px; }
     footer .footer ul:last-of-type {
-      width: 135.66667px;
       margin-right: 0; }
     footer .footer img {
+      width: 75%;
+      margin-top: 12px; }
+  footer .logos {
+    font-size: 12px; }
+    footer .logos .label {
+      font-weight: bold; }
+    footer .logos > ul {
+      width: 218.5px;
+      margin-right: 30px; }
+      footer .logos > ul:last-of-type {
+        margin-right: 0; }
+      footer .logos > ul.mng img {
+        width: 95px; }
+      footer .logos > ul.mkidn {
+        width: 135.66667px; }
+      footer .logos > ul.um {
+        width: 135.66667px; }
+      footer .logos > ul.kd {
+        width: 135.66667px; }
+    footer .logos img {
       width: 75%;
       margin-top: 12px; }
 
@@ -603,7 +615,8 @@ footer {
   .entry .gallery {
     margin-bottom: 48px; }
     .entry .gallery img {
-      width: 467px; }
+      width: 467px;
+      margin-bottom: 12px; }
     .entry .gallery p {
       color: grey;
       font-size: 14px; }
@@ -612,8 +625,9 @@ footer {
   margin-bottom: 48px; }
   .partners ul li {
     width: 135.66667px;
+    height: 100px;
     margin-right: 112.83333px; }
-    .partners ul li:last-of-type {
+    .partners ul li:nth-of-type(3n+3) {
       margin-right: 0; }
   .partners img {
     width: 100%; }
@@ -649,6 +663,10 @@ h3 {
   font-weight: bold;
   margin-bottom: 12px; }
 
+h4 {
+  font-size: 24px;
+  font-weight: bold; }
+
 h5 {
   font-size: 16px;
   font-weight: bold;
@@ -657,6 +675,9 @@ h5 {
 p {
   font-size: 16px;
   margin-bottom: 24px; }
+
+strong, b {
+  font-weight: bold; }
 
 .page-header {
   margin-top: 30px;
@@ -699,10 +720,10 @@ p {
           left: 0;
           font-size: 24px; }
 
-.floater > *, footer .footer > *, .highlight article div > * {
+.floater > *, footer .footer > *, footer .logos > *, .highlight article div > * {
   float: left; }
 
-.floater:after, footer .footer:after, .highlight article div:after {
+.floater:after, footer .footer:after, footer .logos:after, .highlight article div:after {
   clear: left;
   content: "";
   display: table; }
@@ -716,10 +737,9 @@ img {
 .highlight {
   margin-top: 370px;
   margin-bottom: 24px;
-  cursor: pointer;
   color: #9a8fca; }
   .highlight:hover {
-    color: #9a8fca; }
+    color: black; }
   .highlight article {
     width: 798.33333px;
     margin-left: auto;
@@ -748,8 +768,14 @@ img {
   .bricks-container .brick {
     width: 467px;
     margin-left: 0;
-    margin-bottom: 48px;
-    cursor: pointer; }
+    margin-bottom: 48px; }
+    .bricks-container .brick.education-news a:hover {
+      color: #4978d7; }
+    .bricks-container .brick.collection-news a:hover {
+      color: #d7cc60; }
+    .bricks-container .brick a:hover img {
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%); }
     .bricks-container .brick img {
       display: block;
       width: 100%;
@@ -761,8 +787,5 @@ img {
       font-size: 21px; }
     .bricks-container .brick p.date {
       font-size: 36px; }
-    .bricks-container .brick:hover img {
-      -webkit-filter: grayscale(100%);
-              filter: grayscale(100%); }
 
 /*# sourceMappingURL=main.css.map */

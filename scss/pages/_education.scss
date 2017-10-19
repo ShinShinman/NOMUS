@@ -16,6 +16,7 @@
 
 		img {
 			width: grid-columns(6);
+			margin-bottom: 0.5 * $global-margin-bottom;
 		}
 
 		p {
@@ -31,9 +32,10 @@
 	ul {
 		li {
 			width: grid-columns(2);
+			height: 100px;
 			margin-right: grid-columns(1) + 2 * $gutter;
 
-			&:last-of-type {
+			&:nth-of-type(3n+3) {
 				margin-right: 0;
 			}
 		}
