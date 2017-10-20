@@ -66,7 +66,7 @@
 <xsl:template match="partners">
 	<section class="partners">
 		<article>
-			<h5>Partnerzy</h5>
+			<h5>Partner</h5>
 			<ul class="inline-list">
 				<xsl:apply-templates select="item" />
 			</ul>

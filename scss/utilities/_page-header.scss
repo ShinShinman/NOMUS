@@ -1,0 +1,101 @@
+///// PAGE HEADER /////
+
+.page-header {
+	margin-top: $gutter;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+	overflow: visible;
+
+	.logo {
+		@extend .row;
+		margin-bottom: 2 * $global-margin-bottom;
+
+		img {
+		}
+		img.logo-n {
+			position: fixed;
+			top: 30px;
+		}
+	}
+
+	nav {
+		@extend .row;
+		z-index: 100;
+
+		div.slogan {
+			@extend .floater;
+
+			position: relative;
+			width: grid-columns(12);
+
+			img.tail {
+				width: grid-columns(10);
+				margin-right: $gutter;
+			}
+			.menu-trigger {
+				width: grid-columns(2);
+				text-align: center;
+				font-size: 36px;
+				line-height: 1;
+
+				a {
+					display: block;
+					width: 28px;
+					height: 20px;
+					background-image: url('../images/mt.svg');
+					background-position: top;
+					background-repeat: no-repeat;
+					margin: 9px auto 0;
+
+					@include hide-text;
+				}
+			}
+		}
+
+		ul.menu {
+
+			/////
+			display: none;
+			//////
+
+			width: grid-columns(9);
+			margin-left: grid-columns(2) + 45;
+			letter-spacing: 0.01em;
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 30px;
+			
+			margin-top: 52px;
+
+			li {
+				margin-right: 0;
+				&::after {
+					content: '/';
+				}
+				&:hover {
+					color: lightgray;
+
+					ul {
+						display: block;
+					}
+				}
+
+				a {
+					opacity: 1;
+				}
+
+				&.yszt {
+					//margin-top: 60px;
+				}
+
+				ul {
+					display: none;
+					position: absolute;
+					left: 0;
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}

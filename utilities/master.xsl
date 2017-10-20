@@ -9,6 +9,8 @@
 	encoding="UTF-8"
 	indent="yes" />
 
+	<xsl:include href="_main-menu.xsl" />
+	<xsl:include href="_page-header.xsl" />
 	<xsl:include href="_footer.xsl" />
 
 	<xsl:template match="/">
@@ -33,43 +35,8 @@
 					<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 				<![endif]-->
 
-				<section class="page-header">
-					<header class="logo">
-						<a href="{$root}"><img src="{$workspace}/images/n.svg" class="logo-n" /></a>
-						<img src="{$workspace}/images/nomus.svg" class="logo-nomus" />
-					</header>
-					<nav>
-					<div class="menu-anchor" />
-
-					<div class="slogan">
-						<img src="{$workspace}/images/nms.svg" alt="" />
-						<ul class="menu inline-list">
-							<li>
-								<a href="#">działalność</a>
-							</li>
-							<li>
-								<a href="#">muzeum</a>
-							</li>
-							<li><a href="#">przewodniki</a></li>
-							<li class="yszt"><a href="#">newsleter</a></li>
-						</ul>
-					</div>
-
-					<!--
-						<ul class="slogan inline-list">
-							<li>
-								<a href="#">działalność</a>
-							</li>
-							<li>
-								<a href="#">muzeum</a>
-							</li>
-							<li><a href="#">przewodniki</a></li>
-							<li class="yszt"><a href="#">newsleter</a></li>
-						</ul>
-
-					-->
-					</nav>
-				</section>
+				<xsl:call-template name="main-menu" />
+				<xsl:call-template name="page-header" />
 
 				<xsl:apply-templates />
 
@@ -108,8 +75,30 @@
 									left: ''
 								})
 							}
-
 						}
+
+						//menu triger
+						var menuTrigger = $('.menu-trigger a');
+						var mainMenu = $('.main-menu');
+						var mainMenuExtended = false;
+
+						function mainMenuToggle() {
+							if (mainMenuExtended) {
+								mainMenuExtended = false;
+								mainMenu.fadeOut();
+								menuTrigger.css('background-position', 'top');
+							} else {
+								mainMenuExtended = true;
+								mainMenu.fadeIn();
+								menuTrigger.css('background-position', 'bottom');
+							}
+						}
+
+						menuTrigger.click(function(e) {
+							e.preventDefault();
+							mainMenuToggle();
+							console.log ('CLiCK');
+						})
 						
 					})
 				</script>

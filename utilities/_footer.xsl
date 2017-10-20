@@ -49,9 +49,9 @@
 					</ul>
 					<ul>
 						<li class="label">NOMUS</li>
-						<li>O nas</li>
+						<li><a href="{$root}/{//current-language/@handle}/o-nas/">O nas</a></li>
 						<li>Program</li>
-						<li>Kontakt</li>
+						<li><a href="{$root}/{//current-language/@handle}/kontakt/">Kontakt</a></li>
 					</ul>
 					<ul>
 						<li class="label">Media</li>
@@ -71,16 +71,16 @@
 					<li><a href="#"><img src="{$workspace}/images/mg-logo.svg" alt=""/></a></li>
 				</ul>
 				<ul class="mkidn">
-					<li class="label">Nagłówek</li>
+					<li class="label">&nbsp;</li>
 					<li><a href="#"><img src="{$workspace}/images/mkidn-logo.svg" alt=""/></a></li>
 				</ul>
 				<ul class="um">
-					<li class="label">Urząd Marszałkowski</li>
-					<li><a href="#"></a></li>
+					<li class="label">&nbsp;</li>
+					<li><a href="#"><img src="{$workspace}/images/um.svg" alt=""/></a></li>
 				</ul>
 				<ul class="kd">
-					<li class="label">Kultura dostępna</li>
-					<li><a href="#"></a></li>
+					<li class="label">&nbsp;</li>
+					<li><a href="#"><img src="{$workspace}/images/kd.svg" alt=""/></a></li>
 				</ul>
 			</section>
 
