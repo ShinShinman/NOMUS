@@ -20,9 +20,30 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+
 	<xsl:template name="brick">
-		<article class="brick {../section/@handle}">
-			<a href="{$root}/{//current-language/@handle}/edukacja/{title/@handle}/">
+		<xsl:variable name="section">
+			<xsl:choose>
+				<xsl:when test="../section/@handle = 'news-education' and //current-language/@handle = 'pl'">
+					<xsl:text>edukacja</xsl:text>
+				</xsl:when>
+
+				<xsl:when test="../section/@handle = 'news-exhibitions' and //current-language/@handle = 'pl'">
+					<xsl:text>wystawy</xsl:text>
+				</xsl:when>
+
+				<xsl:when test="../section/@handle = 'news-collection' and //current-language/@handle = 'pl'">
+					<xsl:text>kolekcja</xsl:text>
+				</xsl:when>
+
+				<xsl:when test="../section/@handle = 'news-blog'">
+					<xsl:text>blog</xsl:text>
+				</xsl:when>				
+			</xsl:choose>
+		</xsl:variable>
+
+		<article class="brick ../section/@handle">
+			<a href="{$root}/{//current-language/@handle}/{$section}/{title/@handle}/">
 				<xsl:if test="brick-image">
 					<img src="{$workspace}{brick-image/@path}/{brick-image/filename}" alt="" />
 				</xsl:if>

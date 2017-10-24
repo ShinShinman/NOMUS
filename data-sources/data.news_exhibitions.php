@@ -1,27 +1,32 @@
 <?php
 
-class datasourcenews_blog extends SectionDatasource
+class datasourcenews_exhibitions extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'news-blog';
-    public $dsParamORDER = 'desc';
+    public $dsParamROOTELEMENT = 'news-exhibitions';
+    public $dsParamORDER = 'asc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'system:id';
+    public $dsParamSORT = 'order';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
     
 
-    
+    public $dsParamFILTERS = array(
+        '42' => 'yes',
+        '43' => 'yes',
+    );
+        
 
     public $dsParamINCLUDEDELEMENTS = array(
         'title: formatted',
         'subtitle: formatted',
         'brick-image',
-        'date: formatted'
+        'date: formatted',
+        'place: formatted'
     );
     
 
@@ -34,19 +39,19 @@ class datasourcenews_blog extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'News blog',
+            'name' => 'News exhibitions',
             'author' => array(
                 'name' => 'Olaf Schindler',
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-23T13:30:55+00:00'
+            'release-date' => '2017-10-23T13:25:17+00:00'
         );
     }
 
     public function getSource()
     {
-        return '8';
+        return '7';
     }
 
     public function allowEditorToParse()

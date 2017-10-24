@@ -28,7 +28,7 @@
 
 				<!-- Place favicon.ico in the root directory -->
 
-				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css" />
+				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.1" />
 			</head>
 			<body class="{$current-page} hyphenate">
 				<!--[if lte IE 9]>

@@ -1,8 +1,8 @@
 <?php
 
-class datasourcenews_blog extends SectionDatasource
+class datasourcearticle_blog extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'news-blog';
+    public $dsParamROOTELEMENT = 'article-blog';
     public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
@@ -10,20 +10,38 @@ class datasourcenews_blog extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamREQUIREDPARAM = '$title';
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
     
 
-    
+    public $dsParamFILTERS = array(
+        '52' => 'handle:{$title}',
+    );
+        
 
     public $dsParamINCLUDEDELEMENTS = array(
         'title: formatted',
         'subtitle: formatted',
-        'brick-image',
-        'date: formatted'
+        'post: formatted',
+        'date: formatted',
+        'place: formatted',
+        'gallery-tmp',
+        'image-caption: formatted',
+        'partners'
     );
     
+    public $dsParamINCLUDEDASSOCIATIONS = array(
+        'partners' => array(
+            'section_id' => '4',
+            'field_id' => '28',
+            'elements' => array(
+                'link: formatted',
+                'logo'
+            )
+        )
+    );
 
     public function __construct($env = null, $process_params = true)
     {
@@ -34,13 +52,13 @@ class datasourcenews_blog extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'News blog',
+            'name' => 'Article blog',
             'author' => array(
                 'name' => 'Olaf Schindler',
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-23T13:30:55+00:00'
+            'release-date' => '2017-10-23T14:46:11+00:00'
         );
     }
 

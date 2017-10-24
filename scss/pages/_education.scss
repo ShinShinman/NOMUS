@@ -2,6 +2,7 @@
 
 .entry {
 	margin-top: 380px;
+	margin-bottom: 2 * $global-margin-bottom; // tymczasowo
 
 	header {
 		margin-bottom: 2 * $global-margin-bottom;

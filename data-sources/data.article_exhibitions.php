@@ -1,8 +1,8 @@
 <?php
 
-class datasourcenews_blog extends SectionDatasource
+class datasourcearticle_exhibitions extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'news-blog';
+    public $dsParamROOTELEMENT = 'article-exhibitions';
     public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
@@ -10,20 +10,38 @@ class datasourcenews_blog extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamREQUIREDPARAM = '$title';
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
     
 
-    
+    public $dsParamFILTERS = array(
+        '39' => 'handle:{$title}',
+    );
+        
 
     public $dsParamINCLUDEDELEMENTS = array(
         'title: formatted',
         'subtitle: formatted',
-        'brick-image',
-        'date: formatted'
+        'post: formatted',
+        'date: unformatted',
+        'place: formatted',
+        'gallery-tmp',
+        'image-caption: formatted',
+        'partners'
     );
     
+    public $dsParamINCLUDEDASSOCIATIONS = array(
+        'partners' => array(
+            'section_id' => '4',
+            'field_id' => '28',
+            'elements' => array(
+                'link: formatted',
+                'logo'
+            )
+        )
+    );
 
     public function __construct($env = null, $process_params = true)
     {
@@ -34,19 +52,19 @@ class datasourcenews_blog extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'News blog',
+            'name' => 'Article exhibitions',
             'author' => array(
                 'name' => 'Olaf Schindler',
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-23T13:30:55+00:00'
+            'release-date' => '2017-10-23T14:45:43+00:00'
         );
     }
 
     public function getSource()
     {
-        return '8';
+        return '7';
     }
 
     public function allowEditorToParse()

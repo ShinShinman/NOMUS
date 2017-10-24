@@ -36,11 +36,11 @@ section {
 	}
 }
 
-
 ///// TYPO /////
 h1 {
 	font-size: 52px;
 	font-weight: normal;
+	line-height: 1.2;
 }
 
 h2 {
@@ -76,6 +76,9 @@ strong, b {
 	font-weight: bold;
 }
 
+em {
+	font-style: italic;
+}
 
 
 ///// UWAGA /////
@@ -96,103 +99,5 @@ strong, b {
 img {
 	vertical-align: bottom;
 }
-
-///// HIGHLIGHT /////
-.highlight {
-	margin-top: 370px;
-	margin-bottom: $global-margin-bottom;
-
-	color: rgb(154, 143, 202);
-
-	&:hover {
-		color: black;
-	}
-
-	article {
-		width: grid-columns(10);
-		margin-left: auto;
-		margin-right: auto;
-
-		div {
-			@extend .floater;
-			margin-bottom: $global-margin-bottom;
-
-			.subtitle {
-				width: grid-columns(5);
-				margin-right: $gutter;
-			}
-
-			.date {
-				width: grid-columns(5);
-				text-align: right;
-			}
-		}
-
-		h1 {
-			font-size: 72px;
-			text-align: center;
-		}	
-	}
-}
-
-
-///// BRICKS /////
-.bricks-container-header {
-	h1 {
-		font-size: 52px;
-		text-align: center;
-		margin-bottom: 24px;
-	}
-}
-
-.bricks-container {
-	overflow: hidden;
-	
-	article {
-		margin-left: 0;
-	}
-	.brick {
-		width: grid-columns(6);
-		margin-left: 0;
-		margin-bottom: 2 * $global-margin-bottom;
-
-		&.education-news {
-			a:hover {
-				color: $blue;
-			}
-		}
-		&.collection-news {
-			a:hover {
-				color: $yellow;
-			}
-		}
-
-		a:hover {
-			img {
-				filter: grayscale(100%);
-			}
-		}
-
-		img {
-			display: block;
-			width: 100%;
-			margin-bottom: $global-margin-bottom;
-		}
-
-		h1 {
-			font-size: 36px;
-			font-weight: normal;
-		}
-		h3 {
-			font-size: 21px;
-		}
-		p.date {
-			font-size: 36px;
-		}
-	}
-}
-
-
-
 
 //@import 'media-queries';

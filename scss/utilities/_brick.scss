@@ -1,0 +1,58 @@
+///// BRICKS /////
+
+.bricks-container-header {
+	h1 {
+		font-size: 52px;
+		text-align: center;
+		margin-bottom: 2 * $global-margin-bottom;
+	}
+}
+
+.bricks-container {
+	overflow: hidden;
+	
+	article {
+		margin-left: 0;
+	}
+	.brick {
+		width: grid-columns(6);
+		min-height: 550px;
+		margin-left: 0;
+		margin-bottom: 2 * $global-margin-bottom;
+
+		&.news-education {
+			a:hover {
+				color: $blue;
+			}
+		}
+		&.news-collection {
+			a:hover {
+				color: $yellow;
+			}
+		}
+
+		a:hover {
+			img {
+				filter: grayscale(100%);
+			}
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			margin-bottom: $global-margin-bottom;
+		}
+
+		h1 {
+			font-size: 36px;
+			font-weight: normal;
+		}
+		h3 {
+			font-size: 21px;
+		}
+		p.date {
+			font-size: 30px;
+			//font-weight: bold;
+		}
+	}
+}

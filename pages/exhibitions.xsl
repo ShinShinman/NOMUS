@@ -27,7 +27,7 @@
 <xsl:template match="data">
 	<xsl:choose>
 		<xsl:when test="$title">
-			<xsl:apply-templates select="article-education/entry" />
+			<xsl:apply-templates select="article-exhibitions/entry" />
 		</xsl:when>
 		<xsl:otherwise>
 			<h1>YSZT!</h1>
@@ -38,11 +38,11 @@
 
 </xsl:template>
 
-<xsl:template match="article-education/entry">
+<xsl:template match="article-exhibitions/entry">
 	<section class="entry">
 		<article>
 			<header>
-				<h5 class="category">edukacja</h5>
+				<h5 class="category">wystawy</h5>
 				<h1><xsl:value-of select="title" /></h1>
 				<h3><xsl:copy-of select="subtitle/p/node()" /></h3>
 				<h2><xsl:value-of select="date" /></h2>
@@ -51,6 +51,7 @@
 			<xsl:copy-of select="post/node()" />
 		</article>
 	</section>
+
 	<!--
 	<xsl:apply-templates select="partners" />
 	-->
@@ -91,18 +92,6 @@
 				gutter: 30
 			});
 		}
-
-		/*
-		$('.owl-carousel').owlCarousel({
-			loop: true,
-			items: 1,
-			dots: true,
-			smartSpeed: 1000,
-			autoplay: false,
-			autoplayTimeout: 7000,
-			smartSpeed: 800
-		});
-		*/
 	</script>
 </xsl:template>
 
