@@ -119,7 +119,11 @@
 		<meta property="og:url" content="{$root}" />
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="NOMUS" />
+<<<<<<< HEAD
 		<meta property="og:description" content="Nome muzeum sztuki. Oddział Muzeum Narodowego w Gdańsku w budowie" />
+=======
+		<meta property="og:description" content="Nowe muzeum sztuki. Oddział Muzeum Narodowego w Gdańsku w budowie" />
+>>>>>>> dev
 		<meta property="og:image" content="{$workspace}/images/nomus_.svg" />
 	</xsl:template>
 
