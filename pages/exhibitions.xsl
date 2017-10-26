@@ -82,6 +82,14 @@
 	</li>
 </xsl:template>
 
+<xsl:template match="data" mode="og-tags">
+	<meta property="og:url" content="{$current-url}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="{//article-exhibitions/entry/title}" />
+	<meta property="og:description" content="{//article-exhibitions/entry/subtitle}" />
+	<meta property="og:image" content="{$root}/image/4/600/315{//article-exhibitions/entry/gallery-tmp/@path}/{//article-exhibitions/entry/gallery-tmp/filename}" />
+</xsl:template>
+
 <xsl:template match="data" mode="js">
 	<script>
 		console.log('Home');
