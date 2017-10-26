@@ -740,9 +740,14 @@ footer {
   margin-bottom: 48px; }
   .entry header {
     margin-bottom: 48px; }
+    .entry header h2, .entry header h3 {
+      margin-bottom: 0; }
   .entry .category {
     margin-bottom: 0;
     color: #4978d7; }
+  .entry .place {
+    font-weight: bold;
+    font-size: 21px; }
   .entry .gallery {
     margin-bottom: 48px; }
     .entry .gallery img {
