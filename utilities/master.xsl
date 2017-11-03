@@ -19,7 +19,7 @@
 			<head>
 				<meta charset="utf-8" />
 				<meta http-equiv="x-ua-compatible" content="ie=edge" />
-				<meta name="description" content="NOMUS. Nome muzeum sztuki. Oddział Muzeum Narodowego w Gdańsku w budowie" />
+				<meta name="description" content="NOMUS. Nowe muzeum sztuki. Oddział Muzeum Narodowego w Gdańsku w budowie" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<xsl:apply-templates mode="meta-tags"/>
 				<xsl:apply-templates mode="og-tags" />
