@@ -1,0 +1,9 @@
+/* 8.11.2017, Shin */
+/* Wielkość okna 'size-small' */
+
+textarea.size-small .CodeMirror {
+  min-height: 100px !important;
+}
+textarea.size-small .CodeMirror .CodeMirror-scroll {
+  min-height: 100px !important;
+}
