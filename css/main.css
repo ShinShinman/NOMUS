@@ -833,4 +833,66 @@ em {
 img {
   vertical-align: bottom; }
 
+/*** MEDIA QUERIES ***/
+@media all and (max-width: 1023px) and (min-width: 768px) {
+  h1 {
+    font-size: 48px; }
+  h2 {
+    font-size: 31px; }
+  h3 {
+    font-size: 28px; }
+  h4 {
+    font-size: 21px; }
+  .row, section, .page-header .logo, .page-header nav {
+    width: 632.66667px; }
+  .text-column, section article {
+    width: 632.66667px; }
+  .page-header .logo img.logo-n {
+    height: 105px; }
+  .page-header .logo img.logo-nomus {
+    width: 100%; }
+  .page-header nav div.slogan {
+    width: 632.66667px; }
+    .page-header nav div.slogan img.tail {
+      width: 549.83333px;
+      margin-right: 30px; }
+    .page-header nav div.slogan .menu-trigger {
+      width: 52.83333px; }
+      .page-header nav div.slogan .menu-trigger a {
+        margin-top: 4px; }
+  .highlight {
+    margin-top: 300px; }
+    .highlight article {
+      width: 632.66667px; }
+      .highlight article div .subtitle {
+        width: 301.33333px; }
+      .highlight article div .date {
+        width: 301.33333px; }
+  .bricks-container .brick {
+    width: 301.33333px;
+    min-height: 370px; }
+    .bricks-container .brick h1 {
+      font-size: 24px; }
+    .bricks-container .brick h3 {
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 0; }
+    .bricks-container .brick p.date {
+      font-size: 24px; }
+  footer .footer > ul {
+    width: 135.66667px; }
+    footer .footer > ul.office {
+      width: 218.5px; }
+  footer .logos > ul {
+    width: 218.5px; }
+    footer .logos > ul.mkidn {
+      width: 105px;
+      margin-top: 18px; }
+    footer .logos > ul.um {
+      width: 218.5px; }
+  .entry article {
+    margin-left: 0; }
+  .entry header {
+    margin-bottom: 24px; } }
+
 /*# sourceMappingURL=main.css.map */
