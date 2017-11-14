@@ -64,23 +64,23 @@
 			<section class="logos">
 				<ul class="mng">
 					<li class="label">Oddział Muzeum Narodowego w&nbsp;Gdańsku</li>
-					<li><a href="http://mng.bip.gov.pl/"><img src="{$workspace}/images/mng-logo.svg" alt=""/></a></li>
+					<li><a href="http://mng.bip.gov.pl/" target="_blank"><img src="{$workspace}/images/mng-logo.svg" alt=""/></a></li>
 				</ul>
 				<ul>
 					<li class="label">Projekt dofinansowany ze środków Miasta Gdańska</li>
-					<li><a href="http://www.gdansk.pl/"><img src="{$workspace}/images/mg-logo.svg" alt=""/></a></li>
+					<li><a href="http://www.gdansk.pl/" target="_blank"><img src="{$workspace}/images/mg-logo.svg" alt=""/></a></li>
 				</ul>
 				<ul class="mkidn">
 					<li class="label">&nbsp;</li>
-					<li><a href="http://www.mkidn.gov.pl/"><img src="{$workspace}/images/mkidn-logo.svg" alt=""/></a></li>
+					<li><a href="http://www.mkidn.gov.pl/" target="_blank"><img src="{$workspace}/images/mkidn-logo.svg" alt=""/></a></li>
 				</ul>
 				<ul class="um">
 					<li class="label">&nbsp;</li>
-					<li><a href="https://pomorskie.eu/"><img src="{$workspace}/images/um.svg" alt=""/></a></li>
+					<li><a href="https://pomorskie.eu/" target="_blank"><img src="{$workspace}/images/um.svg" alt=""/></a></li>
 				</ul>
 				<ul class="kd">
 					<li class="label">&nbsp;</li>
-					<li><a href="https://kulturadostepna.pl/"><img src="{$workspace}/images/kd.svg" alt=""/></a></li>
+					<li><a href="https://kulturadostepna.pl/" target="_blank"><img src="{$workspace}/images/kd.svg" alt=""/></a></li>
 				</ul>
 			</section>
 
