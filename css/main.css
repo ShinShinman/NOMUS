@@ -895,4 +895,82 @@ img {
   .entry header {
     margin-bottom: 24px; } }
 
+@media all and (max-width: 767px) {
+  h1 {
+    font-size: 48px; }
+  h2 {
+    font-size: 31px; }
+  h3 {
+    font-size: 28px; }
+  h4 {
+    font-size: 21px; }
+  .row, section, .page-header .logo, .page-header nav {
+    width: 301.33333px; }
+  .text-column, section article {
+    width: 301.33333px; }
+  .page-header {
+    margin-top: 2px; }
+    .page-header .logo {
+      width: 100%; }
+      .page-header .logo img.logo-n {
+        width: 100%;
+        top: 2px; }
+      .page-header .logo img.logo-nomus {
+        width: 100%; }
+    .page-header nav {
+      width: 100%; }
+      .page-header nav div.slogan {
+        width: 100%; }
+        .page-header nav div.slogan img.tail {
+          width: 80%;
+          margin-right: 30px; }
+        .page-header nav div.slogan .menu-trigger {
+          width: 28px; }
+          .page-header nav div.slogan .menu-trigger a {
+            background-image: url(../images/mt-mob.svg);
+            margin-top: -2px; }
+  .main-menu {
+    padding-top: 180px; }
+  .highlight {
+    display: none; }
+  .bricks-container-header {
+    margin-top: 180px; }
+  .bricks-container .brick {
+    width: 301.33333px;
+    min-height: initial; }
+    .bricks-container .brick h1 {
+      font-size: 24px; }
+    .bricks-container .brick h3 {
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 0; }
+    .bricks-container .brick p.date {
+      font-size: 24px;
+      margin-bottom: 0; }
+  footer .footer > ul {
+    width: 52.83333px; }
+    footer .footer > ul.office {
+      width: 135.66667px; }
+  footer .logos > ul {
+    width: 135.66667px; }
+    footer .logos > ul:nth-of-type(2n) {
+      margin-right: 0; }
+    footer .logos > ul.mkidn {
+      width: 135.66667px;
+      margin-top: 18px; }
+    footer .logos > ul.um {
+      margin-top: 18px; }
+      footer .logos > ul.um img {
+        width: 100%; }
+  .entry {
+    margin-top: 180px; }
+    .entry article {
+      margin-left: 0; }
+    .entry header {
+      margin-bottom: 24px; }
+    .entry .gallery img {
+      width: 100%; }
+  .education .bricks-container-header, .blog .bricks-container-header, .collection .bricks-container-header {
+    margin-top: 0; } }
+
 /*# sourceMappingURL=main.css.map */
