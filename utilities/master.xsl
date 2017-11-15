@@ -48,6 +48,7 @@
 				<!-- Place favicon.ico in the root directory -->
 
 				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.2" />
+				<xsl:call-template name="ga" />
 			</head>
 			<body class="{$current-page} hyphenate">
 				<!--[if lte IE 9]>
@@ -167,6 +168,18 @@
 		<meta name="theme-color" content="#ffffff" />
 	</xsl:template>
 
-<xsl:template match="data" mode="js" />
+	<xsl:template name="ga">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-109665588-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-109665588-1');
+		</script>
+	</xsl:template>
+
+	<xsl:template match="data" mode="js" />
 
 </xsl:stylesheet>
