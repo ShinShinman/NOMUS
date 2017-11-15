@@ -768,6 +768,9 @@ footer {
   .partners img {
     width: 100%; }
 
+.artist .dates {
+  font-size: 24px; }
+
 /*** NOMUS styles ***/
 html {
   overflow-y: scroll;
@@ -826,6 +829,9 @@ em {
   clear: left;
   content: "";
   display: table; }
+
+.top-offset {
+  margin-top: 380px; }
 
 .icon {
   font-family: 'Social'; }

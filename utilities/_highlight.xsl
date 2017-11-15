@@ -28,7 +28,8 @@
 
 	<xsl:template match="highlight/entry">
 	<article>
-		<a href="{$root}/{//current-language/@handle}/edukacja/{article/item/title/@handle}/">
+		<!-- {$root}/{//current-language/@handle}/edukacja/{article/item/title/@handle}/ -->
+		<a href="javascript:void(0);">
 			<div>
 				<h4 class="subtitle"><xsl:value-of select="article/item/subtitle/p" /></h4>
 				<h4 class="date"><xsl:value-of select="article/item/date" /></h4>
