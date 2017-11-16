@@ -1,0 +1,32 @@
+///// COLLECTION: ITEM /////
+
+section {
+	header:not(.logo) {
+		@extend .floater;
+
+		margin-bottom: $gutter;
+
+		h1 {
+			font-size: 36px;
+		}
+		h2 {
+			font-size: 24px;
+		}
+		p {
+			margin-bottom: 0;
+			&.tags {
+				margin-top: $global-margin-bottom;
+			}
+		}
+		div {
+			width: grid-columns(6);
+			margin-right: $gutter;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+		img {
+			width: 100%;
+		}
+	}
+}

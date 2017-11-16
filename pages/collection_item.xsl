@@ -30,19 +30,38 @@
 			<h1>Zbiory</h1>
 			<xsl:call-template name="navigation-collection" />
 		</section>
+		
+		<xsl:apply-templates select="collection-item/entry" />
+			
+	</xsl:template>
+
+	<xsl:template match="collection-item/entry">
 		<section>
+			<header>
+				<div>
+					<img src="{$workspace}{images/file/@path}/{images/file/filename}" alt=""/>
+				</div>
+				<div>
+					<h1><xsl:copy-of select="title/p/node()" /></h1>
+					<h2><xsl:value-of select="concat(artist/item/firstname, ' ', artist/item/surname)" /></h2>
+					<p><xsl:value-of select="creation-date" /></p>
+					<p><xsl:value-of select="creation-place" /></p>
+					<p><xsl:value-of select="technic" /></p>
+					<xsl:apply-templates select="tags" />
+				</div>
+			</header>
 			<article>
-				<p>
-					<xsl:apply-templates select="//tags/item[not(. = following::item)]">
-						<xsl:sort select="@handle" />
-					</xsl:apply-templates>
-				</p>
+				<xsl:copy-of select="description" />
 			</article>
 		</section>
 	</xsl:template>
 
+	<xsl:template match="tags">
+		<p class="tags"><xsl:apply-templates select="item" /></p>
+	</xsl:template>
+
 	<xsl:template match="tags/item">
-		<span class="tag"><xsl:text> #</xsl:text><xsl:value-of select="." /></span>
+		<span class="tag"><xsl:text>#</xsl:text><xsl:value-of select="." /></span>
 	</xsl:template>
 
 </xsl:stylesheet>

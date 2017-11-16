@@ -605,6 +605,22 @@ section:last-of-type {
           left: 0;
           font-size: 24px; }
 
+.section-header h1 {
+  text-align: center;
+  margin-bottom: 24px; }
+
+.section-header nav {
+  border-top: solid 3px;
+  margin-bottom: 48px; }
+  .section-header nav li {
+    width: 301.33333px;
+    text-align: center; }
+    .section-header nav li:first-of-type {
+      text-align: left; }
+    .section-header nav li:last-of-type {
+      text-align: right;
+      margin-right: -30px; }
+
 .highlight {
   margin-top: 370px;
   margin-bottom: 24px;
@@ -659,6 +675,22 @@ section:last-of-type {
       font-size: 21px; }
     .bricks-container .brick p.date {
       font-size: 30px; }
+
+.bricks-container article {
+  margin-left: 0; }
+
+.bricks-container .collection-brick {
+  width: 218.5px; }
+  .bricks-container .collection-brick h1 {
+    font-size: 21px;
+    font-weight: bold; }
+  .bricks-container .collection-brick h2 {
+    font-size: 18px;
+    font-weight: normal; }
+  .bricks-container .collection-brick img {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px; }
 
 footer {
   background-color: black;
@@ -768,8 +800,34 @@ footer {
   .partners img {
     width: 100%; }
 
+a:hover {
+  color: #d7cc60; }
+
 .artist .dates {
   font-size: 24px; }
+
+.tag {
+  background-color: #d7cc60;
+  margin-right: 30px;
+  padding: 5px 5px 3px; }
+
+section header:not(.logo) {
+  margin-bottom: 30px; }
+  section header:not(.logo) h1 {
+    font-size: 36px; }
+  section header:not(.logo) h2 {
+    font-size: 24px; }
+  section header:not(.logo) p {
+    margin-bottom: 0; }
+    section header:not(.logo) p.tags {
+      margin-top: 24px; }
+  section header:not(.logo) div {
+    width: 467px;
+    margin-right: 30px; }
+    section header:not(.logo) div:last-of-type {
+      margin-right: 0; }
+  section header:not(.logo) img {
+    width: 100%; }
 
 /*** NOMUS styles ***/
 html {
@@ -822,10 +880,10 @@ strong, b {
 em {
   font-style: italic; }
 
-.floater > *, .page-header nav div.slogan > *, .highlight article div > *, footer .footer > *, footer .logos > * {
+.floater > *, .page-header nav div.slogan > *, .highlight article div > *, footer .footer > *, footer .logos > *, section header:not(.logo) > * {
   float: left; }
 
-.floater:after, .page-header nav div.slogan:after, .highlight article div:after, footer .footer:after, footer .logos:after {
+.floater:after, .page-header nav div.slogan:after, .highlight article div:after, footer .footer:after, footer .logos:after, section header:not(.logo):after {
   clear: left;
   content: "";
   display: table; }

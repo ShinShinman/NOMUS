@@ -23,16 +23,12 @@
 
 	<xsl:import href="../utilities/master.xsl" />
 	<xsl:include href="../utilities/_news.xsl" />
+	<xsl:include href="../utilities/_navigation-collection.xsl" />
 
 	<xsl:template match="data">
-		<section class="top-offset">
+		<section class="top-offset section-header">
 			<h1>Zbiory</h1>
-			<ul class="inline-list">
-				<li>raz</li>
-				<li>dwa</li>
-				<li>trzy</li>
-				<li>4444</li>
-			</ul>
+			<xsl:call-template name="navigation-collection" />
 		</section>
 		<section>
 			<xsl:apply-templates select="collection-artists/entry" />

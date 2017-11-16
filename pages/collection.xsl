@@ -23,6 +23,7 @@
 
 <xsl:import href="../utilities/master.xsl" />
 <xsl:include href="../utilities/_news.xsl" />
+	<xsl:include href="../utilities/_navigation-collection.xsl" />
 
 <xsl:template match="data">
 	<xsl:choose>
@@ -30,12 +31,32 @@
 			<xsl:apply-templates select="article-collection/entry" />
 		</xsl:when>
 		<xsl:otherwise>
-			<h1>YSZT!</h1>
+			<xsl:call-template name="collection" />
 		</xsl:otherwise>
 	</xsl:choose>
 	
-	<xsl:call-template name="news" />
+	<!-- <xsl:call-template name="news" /> -->
 
+</xsl:template>
+
+<xsl:template name="collection">
+	<section class="top-offset section-header">
+		<h1>Zbiory</h1>
+		<xsl:call-template name="navigation-collection" />
+	</section>
+	<section class="bricks-container">
+		<xsl:apply-templates select="//collection/entry" />
+	</section>
+</xsl:template>
+
+<xsl:template match="collection/entry">
+	<article class="collection-brick">
+		<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/eksponat/{title/@handle}/">
+			<img src="{$workspace}{images/file/@path}/{images/file/filename}" />
+			<h1><xsl:copy-of select="title/p/node()" /></h1>
+			<h2><xsl:value-of select="concat(artist/item/firstname, ' ', artist/item/surname)" /></h2>
+		</a>
+	</article>
 </xsl:template>
 
 <xsl:template match="article-collection/entry">
@@ -55,6 +76,8 @@
 	<!--
 	<xsl:apply-templates select="partners" />
 	-->
+
+	<xsl:call-template name="news" />
 
 </xsl:template>
 
@@ -92,11 +115,9 @@
 
 <xsl:template match="data" mode="js">
 	<script>
-		console.log('Home');
-
 		window.onload = function () {
 			var msnry = new Masonry( '.bricks-container', {
-				itemSelector: '.brick',
+				itemSelector: '.brick, .collection-brick',
 				gutter: 30
 			});
 		}

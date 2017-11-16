@@ -24,6 +24,7 @@
 		<section class="main-menu">
 			<article>
 				<h2><a href="{$root}/">Aktualności</a></h2>
+				<h2><a href="{$root}/{//current-language/@handle}/zbiory/">Zbiory</a></h2>
 				<h2><a href="{$root}/{//current-language/@handle}/o-nas/">O nas</a></h2>
 				<h2><a href="{$root}/{//current-language/@handle}/kontakt/">Kontakt</a></h2>
 			</article>

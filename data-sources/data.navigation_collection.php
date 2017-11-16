@@ -1,38 +1,23 @@
 <?php
 
-class datasourcecollection extends SectionDatasource
+require_once(EXTENSIONS.'/page_lhandles/lib/class.datasource.MultilingualNavigation.php');
+
+class datasourcenavigation_collection extends MultilingualNavigationDatasource
 {
-    public $dsParamROOTELEMENT = 'collection';
+    public $dsParamROOTELEMENT = 'navigation-collection';
     public $dsParamORDER = 'asc';
-    public $dsParamPAGINATERESULTS = 'no';
-    public $dsParamLIMIT = '20';
-    public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'creation-date';
-    public $dsParamHTMLENCODE = 'no';
-    public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
     
 
-    
+    public $dsParamFILTERS = array(
+        'parent' => '/collection',
+        'type' => 'menu',
+    );
+        
 
-    public $dsParamINCLUDEDELEMENTS = array(
-        'title: formatted',
-        'images',
-        'artist'
-    );
     
-    public $dsParamINCLUDEDASSOCIATIONS = array(
-        'artist' => array(
-            'section_id' => '9',
-            'field_id' => '67',
-            'elements' => array(
-                'surname: formatted',
-                'firstname: formatted'
-            )
-        )
-    );
 
     public function __construct($env = null, $process_params = true)
     {
@@ -43,19 +28,19 @@ class datasourcecollection extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Collection',
+            'name' => 'Navigation Collection',
             'author' => array(
                 'name' => 'Olaf Schindler',
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-11-15T22:23:34+00:00'
+            'release-date' => '2017-11-15T22:30:35+00:00'
         );
     }
 
     public function getSource()
     {
-        return '10';
+        return 'navigation';
     }
 
     public function allowEditorToParse()
