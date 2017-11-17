@@ -33,7 +33,7 @@
 				</xsl:when>
 
 				<xsl:when test="../section/@handle = 'news-collection' and //current-language/@handle = 'pl'">
-					<xsl:text>kolekcja</xsl:text>
+					<xsl:text>zbiory</xsl:text>
 				</xsl:when>
 
 				<xsl:when test="../section/@handle = 'news-blog'">
