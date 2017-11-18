@@ -46,6 +46,7 @@
 				<h1><xsl:value-of select="title" /></h1>
 				<h3><xsl:copy-of select="subtitle/p/node()" /></h3>
 				<h2><xsl:value-of select="date" /></h2>
+				<xsl:apply-templates select="place" />
 			</header>
 			<xsl:apply-templates select="gallery-tmp" />
 			<xsl:copy-of select="post/node()" />
@@ -56,6 +57,10 @@
 	<xsl:apply-templates select="partners" />
 	-->
 
+</xsl:template>
+
+<xsl:template match="place">
+	<p class="place"><xsl:value-of select="." /></p>
 </xsl:template>
 
 <xsl:template match="gallery-tmp">
