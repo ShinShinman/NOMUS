@@ -1,6 +1,6 @@
 ///// COLLECTION: ITEM /////
 
-section {
+section.collection-item {
 	header:not(.logo) {
 		@extend .floater;
 

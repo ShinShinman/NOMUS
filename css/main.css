@@ -808,25 +808,31 @@ a:hover {
 
 .tag {
   background-color: #d7cc60;
+  border-radius: 2px;
   margin-right: 30px;
-  padding: 5px 5px 3px; }
+  padding: 2px 5px; }
+  .tag:hover {
+    background-color: lightgrey; }
+  .tag a:hover {
+    color: black;
+    opacity: 1; }
 
-section header:not(.logo) {
+section.collection-item header:not(.logo) {
   margin-bottom: 30px; }
-  section header:not(.logo) h1 {
+  section.collection-item header:not(.logo) h1 {
     font-size: 36px; }
-  section header:not(.logo) h2 {
+  section.collection-item header:not(.logo) h2 {
     font-size: 24px; }
-  section header:not(.logo) p {
+  section.collection-item header:not(.logo) p {
     margin-bottom: 0; }
-    section header:not(.logo) p.tags {
+    section.collection-item header:not(.logo) p.tags {
       margin-top: 24px; }
-  section header:not(.logo) div {
+  section.collection-item header:not(.logo) div {
     width: 467px;
     margin-right: 30px; }
-    section header:not(.logo) div:last-of-type {
+    section.collection-item header:not(.logo) div:last-of-type {
       margin-right: 0; }
-  section header:not(.logo) img {
+  section.collection-item header:not(.logo) img {
     width: 100%; }
 
 /*** NOMUS styles ***/
@@ -880,10 +886,10 @@ strong, b {
 em {
   font-style: italic; }
 
-.floater > *, .page-header nav div.slogan > *, .highlight article div > *, footer .footer > *, footer .logos > *, section header:not(.logo) > * {
+.floater > *, .page-header nav div.slogan > *, .highlight article div > *, footer .footer > *, footer .logos > *, section.collection-item header:not(.logo) > * {
   float: left; }
 
-.floater:after, .page-header nav div.slogan:after, .highlight article div:after, footer .footer:after, footer .logos:after, section header:not(.logo):after {
+.floater:after, .page-header nav div.slogan:after, .highlight article div:after, footer .footer:after, footer .logos:after, section.collection-item header:not(.logo):after {
   clear: left;
   content: "";
   display: table; }

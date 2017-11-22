@@ -1,6 +1,18 @@
 ///// COLLECTION: OUR TAGS /////
 .tag {
 	background-color: $yellow;
+	border-radius: 2px;
 	margin-right: $gutter;
-	padding: 5px 5px 3px;
+	padding: 2px 5px;
+
+	&:hover {
+		background-color: lightgrey;
+	}
+
+	a {
+		&:hover {
+			color: black;
+			opacity: 1;
+		}	
+	}
 }

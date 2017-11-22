@@ -36,7 +36,7 @@
 	</xsl:template>
 
 	<xsl:template match="collection-item/entry">
-		<section>
+		<section class="collection-item">
 			<header>
 				<div>
 					<img src="{$workspace}{images/file/@path}/{images/file/filename}" alt=""/>

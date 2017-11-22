@@ -30,6 +30,18 @@
 			<h1>Zbiory</h1>
 			<xsl:call-template name="navigation-collection" />
 		</section>
+
+		<xsl:choose>
+		<xsl:when test="$tag">
+			<xsl:apply-templates select="collection" />
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:call-template name="our-tags" />
+		</xsl:otherwise>
+	</xsl:choose>
+	</xsl:template>
+
+	<xsl:template name="our-tags">
 		<section>
 			<article>
 				<p>
@@ -42,7 +54,34 @@
 	</xsl:template>
 
 	<xsl:template match="tags/item">
-		<span class="tag"><xsl:text> #</xsl:text><xsl:value-of select="." /></span>
+		<span class="tag"><a href="{$root}{$current-path}/{@handle}"><xsl:text> #</xsl:text><xsl:value-of select="." /></a></span>
+	</xsl:template>
+
+	<xsl:template match="collection">
+	<section class="bricks-container">
+		<xsl:apply-templates select="entry" />
+	</section>
+	</xsl:template>
+
+	<xsl:template match="collection/entry">
+		<article class="collection-brick">
+			<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/eksponat/{title/@handle}/">
+				<img src="{$workspace}{images/file/@path}/{images/file/filename}" />
+				<h1><xsl:copy-of select="title/p/node()" /></h1>
+				<h2><xsl:value-of select="concat(artist/item/firstname, ' ', artist/item/surname)" /></h2>
+			</a>
+		</article>
+	</xsl:template>
+
+	<xsl:template match="data" mode="js">
+		<script>
+			window.onload = function () {
+				var msnry = new Masonry( '.bricks-container', {
+					itemSelector: '.brick, .collection-brick',
+					gutter: 30
+				});
+			}
+		</script>
 	</xsl:template>
 
 </xsl:stylesheet>
