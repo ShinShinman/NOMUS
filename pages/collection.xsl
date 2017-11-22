@@ -63,7 +63,7 @@
 	<section class="entry">
 		<article>
 			<header>
-				<h5 class="category">Kolekcja</h5>
+				<h5 class="category">Zbiory</h5>
 				<h1><xsl:value-of select="title" /></h1>
 				<h3><xsl:copy-of select="subtitle/p/node()" /></h3>
 				<h2><xsl:value-of select="date" /></h2>

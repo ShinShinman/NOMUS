@@ -61,7 +61,7 @@
 	</xsl:template>
 
 	<xsl:template match="tags/item">
-		<span class="tag"><xsl:text>#</xsl:text><xsl:value-of select="." /></span>
+		<span class="tag"><a href="{$root}/{//current-language/@handle}/zbiory/nasze-tagi/{@handle}"><xsl:text> #</xsl:text><xsl:value-of select="." /></a></span>
 	</xsl:template>
 
 </xsl:stylesheet>

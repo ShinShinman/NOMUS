@@ -25,6 +25,7 @@
 			<ul class="inline-list">
 				<li><a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/"><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></a></li>
 				<xsl:apply-templates select="//navigation-collection/page/item[@lang = //current-language/@handle]" />
+				<li><a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/wyszukiwarka/" class="icon">s</a></li>
 			</ul>
 		</nav>
 	</xsl:template>

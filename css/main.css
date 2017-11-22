@@ -606,18 +606,18 @@ section:last-of-type {
           font-size: 24px; }
 
 .section-header h1 {
-  text-align: center;
-  margin-bottom: 24px; }
+  text-align: center; }
 
 .section-header nav {
   border-top: solid 3px;
-  margin-bottom: 48px; }
+  margin-bottom: 24px; }
   .section-header nav li {
-    width: 301.33333px;
+    width: 269.91667px;
     text-align: center; }
     .section-header nav li:first-of-type {
       text-align: left; }
     .section-header nav li:last-of-type {
+      width: 99.25px;
       text-align: right;
       margin-right: -30px; }
 
@@ -835,6 +835,18 @@ section.collection-item header:not(.logo) {
   section.collection-item header:not(.logo) img {
     width: 100%; }
 
+.collection-search form {
+  width: 632.66667px;
+  margin-left: auto;
+  margin-right: auto; }
+  .collection-search form input {
+    outline: none;
+    border: none;
+    border-bottom: solid 1px black;
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.5; }
+
 /*** NOMUS styles ***/
 html {
   overflow-y: scroll;
@@ -851,6 +863,9 @@ body {
 .text-column, section article {
   width: 632.66667px;
   margin-left: 248.5px; }
+
+section {
+  margin-bottom: 48px; }
 
 h1 {
   font-size: 52px;

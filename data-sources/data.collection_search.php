@@ -1,29 +1,30 @@
 <?php
 
-class datasourcecollection extends SectionDatasource
+class datasourcecollection_search extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'collection';
-    public $dsParamORDER = 'asc';
+    public $dsParamROOTELEMENT = 'collection-search';
+    public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'creation-date';
+    public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
     
 
     public $dsParamFILTERS = array(
-        '79' => '{$tag}',
+        '84' => '{$url-keywords}',
     );
         
 
     public $dsParamINCLUDEDELEMENTS = array(
         'title: formatted',
         'images',
-        'artist'
+        'artist',
+        'search-index'
     );
     
     public $dsParamINCLUDEDASSOCIATIONS = array(
@@ -46,13 +47,13 @@ class datasourcecollection extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Collection',
+            'name' => 'Collection Search',
             'author' => array(
                 'name' => 'Olaf Schindler',
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-11-22T16:23:15+00:00'
+            'release-date' => '2017-11-22T16:25:23+00:00'
         );
     }
 
