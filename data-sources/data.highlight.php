@@ -13,9 +13,6 @@ class datasourcehighlight extends SectionDatasource
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
-    
-
-    
 
     public $dsParamINCLUDEDELEMENTS = array(
         'slogan: formatted',
@@ -24,8 +21,8 @@ class datasourcehighlight extends SectionDatasource
     
     public $dsParamINCLUDEDASSOCIATIONS = array(
         'article' => array(
-            'section_id' => '2',
-            'field_id' => '2',
+            'section_id' => '8',
+            'field_id' => '52',
             'elements' => array(
                 'title: formatted',
                 'subtitle: formatted',
@@ -46,10 +43,10 @@ class datasourcehighlight extends SectionDatasource
             'name' => 'Highlight',
             'author' => array(
                 'name' => 'Olaf Schindler',
-                'website' => 'http://localhost/nomus.gda.pl',
+                'website' => 'http://nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-19T12:08:32+00:00'
+            'release-date' => '2017-11-16T22:29:01+00:00'
         );
     }
 
