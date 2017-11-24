@@ -680,7 +680,8 @@ section:last-of-type {
   margin-left: 0; }
 
 .bricks-container .collection-brick {
-  width: 218.5px; }
+  width: 218.5px;
+  margin-bottom: 24px; }
   .bricks-container .collection-brick h1 {
     font-size: 21px;
     font-weight: bold; }

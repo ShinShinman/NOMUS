@@ -5,6 +5,7 @@
 	}		
 	.collection-brick {
 		width: grid-columns(3);
+		margin-bottom: $global-margin-bottom;
 		h1 {
 			font-size: 21px;
 			font-weight: bold;
