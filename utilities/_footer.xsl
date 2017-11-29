@@ -58,6 +58,7 @@
 						<li class="icon"><a href="https://www.facebook.com/nomus.gd/" target="_blank">&#x0066;</a></li>
 						<li class="icon"><a href="https://twitter.com/nomus_gdansk/" target="_blank">&#xe800;</a></li>
 						<li class="icon"><a href="https://www.instagram.com/nomus.gdansk/" target="_blank">&#x0069;</a></li>
+						<li class="icon"><a href="https://vimeo.com/nomus/" target="_blank">&#x0076;</a></li>
 					</ul>
 			</section>
 
