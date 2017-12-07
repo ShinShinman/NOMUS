@@ -58,9 +58,14 @@
 	</xsl:template>
 
 	<xsl:template match="collection">
-	<section class="bricks-container">
-		<xsl:apply-templates select="entry" />
-	</section>
+		<section>
+			<article>
+				<h1 class="tag-header">#<xsl:value-of select="//collection-tags/entry[tags/item/@handle = $tag][1]/tags/item" /></h1>
+			</article>
+		</section>
+		<section class="bricks-container">
+			<xsl:apply-templates select="entry" />
+		</section>
 	</xsl:template>
 
 	<xsl:template match="collection/entry">

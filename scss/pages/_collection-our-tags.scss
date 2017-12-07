@@ -16,3 +16,19 @@
 		}	
 	}
 }
+
+.our-tags {
+	section:not(.bricks-container) {
+		article {
+			margin-left: grid-columns(2) + $gutter;
+			margin-right: grid-columns(2) + $gutter;
+			width: grid-columns(8);
+			p {
+				line-height: 3;
+			}
+		}
+	}
+	.tag-header {
+		text-align: center;
+	}
+}

@@ -818,6 +818,16 @@ a:hover {
     color: black;
     opacity: 1; }
 
+.our-tags section:not(.bricks-container) article {
+  margin-left: 165.66667px;
+  margin-right: 165.66667px;
+  width: 632.66667px; }
+  .our-tags section:not(.bricks-container) article p {
+    line-height: 3; }
+
+.our-tags .tag-header {
+  text-align: center; }
+
 section.collection-item header:not(.logo) {
   margin-bottom: 30px; }
   section.collection-item header:not(.logo) h1 {
