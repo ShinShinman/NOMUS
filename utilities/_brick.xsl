@@ -33,7 +33,7 @@
 				</xsl:when>
 
 				<xsl:when test="../section/@handle = 'news-collection' and //current-language/@handle = 'pl'">
-					<xsl:text>kolekcja</xsl:text>
+					<xsl:text>zbiory</xsl:text>
 				</xsl:when>
 
 				<xsl:when test="../section/@handle = 'news-blog'">
@@ -42,7 +42,7 @@
 			</xsl:choose>
 		</xsl:variable>
 
-		<article class="brick ../section/@handle">
+		<article class="brick {../section/@handle}">
 			<a href="{$root}/{//current-language/@handle}/{$section}/{title/@handle}/">
 				<xsl:if test="brick-image">
 					<img src="{$workspace}{brick-image/@path}/{brick-image/filename}" alt="" />

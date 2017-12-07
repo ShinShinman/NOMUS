@@ -1,0 +1,26 @@
+///// NAVIGATION: COLLECTION /////
+
+.section-header {
+	h1 {
+		text-align: center;
+	}
+	nav {
+		border-top: solid 3px;
+		margin-bottom: $global-margin-bottom;
+		li {
+			width: grid-columns(3.5)+10;
+			text-align: center; // usunąć po dodaniu wyszukiwarki
+			&:first-of-type {
+				text-align: left;
+			}
+			&:last-of-type {
+				width: grid-columns(1.5)+5;
+				text-align: right;
+				margin-right: -30px;
+				///// TMP /////
+				//width: 330px;
+				///// TMP /////
+			}
+		}
+	}
+}

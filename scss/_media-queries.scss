@@ -1,0 +1,273 @@
+/*** MEDIA QUERIES ***/
+
+@media all and (max-width: 1023px) and (min-width: 768px) {
+
+	///// TYPO /////
+	h1 {
+		font-size: 48px;
+	}
+	h2 {
+		font-size: 31px;
+	}
+	h3 {
+		font-size: 28px;
+	}
+	h4 {
+		font-size: 21px;
+	}
+
+	///// LAYOUT /////
+	.row {
+		width: grid-columns(8);
+	}
+	.text-column {
+		width: grid-columns(8);
+	}
+
+	///// PAGE HEADER /////
+	.page-header {
+		.logo {
+			img {
+				&.logo-n {
+					height: 105px;
+				}
+				&.logo-nomus {
+				width: 100%;
+				}
+			}
+		}
+		nav {
+			div.slogan {
+				width: grid-columns(8);
+				img.tail {
+					width: grid-columns(7);
+					margin-right: $gutter;
+				}
+				.menu-trigger {
+					width: grid-columns(1);
+					a {
+						margin-top: 4px;
+					}
+				}
+			}
+		}
+	}
+
+	///// HIGHLIGHT /////
+	.highlight {
+		margin-top: 300px;
+		article {
+			width: grid-columns(8);
+			div {
+				.subtitle {
+					width: grid-columns(4);
+				}
+				.date {
+					width: grid-columns(4);
+				}
+			}
+		}
+	}
+
+	///// BRIKCS /////
+	.bricks-container {
+		.brick {
+			width: grid-columns(4);
+			min-height: 370px;
+			h1 {
+				font-size: 24px;
+			}
+			h3 {
+				font-size: 16px;
+				font-weight: normal;
+				margin-bottom: 0;
+			}
+			p.date {
+				font-size: 24px;
+			}
+		}
+	}
+
+	///// FOOTER /////
+	footer {
+		.footer {
+			& > ul {
+				width: grid-columns(2);
+				&.office {
+					width: grid-columns(3);
+				}
+			}
+		}
+		.logos {
+			& > ul {
+				width: grid-columns(3);
+				&.mkidn {
+					width: 105px;
+					margin-top: 18px;
+				}
+				&.um {
+					width: grid-columns(3);
+				}
+			}
+		}
+	}
+
+	///// ENTRY /////
+	.entry {
+		article {
+			margin-left: 0;
+		}
+		header {
+			margin-bottom: 24px;
+		}
+	}
+		
+	
+}
+
+
+@media all and (max-width: 767px) {
+
+	///// TYPO /////
+	h1 {
+		font-size: 48px;
+	}
+	h2 {
+		font-size: 31px;
+	}
+	h3 {
+		font-size: 28px;
+	}
+	h4 {
+		font-size: 21px;
+	}
+	
+	///// LAYOUT /////
+	.row {
+		width: grid-columns(4);
+	}
+	.text-column {
+		width: grid-columns(4);
+	}
+
+	///// PAGE HEADER /////
+	.page-header {
+		margin-top: 2px;
+		.logo {
+			width: 100%;
+			img {
+				&.logo-n {
+					width: 100%;
+					top: 2px;
+				}
+				&.logo-nomus {
+				width: 100%;
+				}
+			}
+		}
+		nav {
+			width: 100%;
+			div.slogan {
+				width: 100%;
+				img.tail {
+					width: 80%;
+					margin-right: $gutter;
+				}
+				.menu-trigger {
+					width: 28px;
+					a {
+						background-image: url(../images/mt-mob.svg);
+						margin-top: -2px;
+					}
+				}
+			}
+		}
+	}
+
+	///// MAIN MENU /////
+	.main-menu {
+		padding-top: 180px;
+	}
+
+	///// HIGHLIGHT /////
+	.highlight {
+		display: none;
+	}
+
+	///// BRIKCS /////
+	.bricks-container-header {
+		margin-top: 180px;
+	}
+	.bricks-container {
+		.brick {
+			width: grid-columns(4);
+			min-height: initial;
+			h1 {
+				font-size: 24px;
+			}
+			h3 {
+				font-size: 16px;
+				font-weight: normal;
+				margin-bottom: 0;
+			}
+			p.date {
+				font-size: 24px;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	///// FOOTER /////
+	footer {
+		.footer {
+			& > ul {
+				width: grid-columns(1);
+				&.office {
+					width: grid-columns(2);
+				}
+			}
+		}
+		.logos {
+			& > ul {
+				width: grid-columns(2);
+				&:nth-of-type(2n) {
+					margin-right: 0;
+				}
+				&.mkidn {
+					width: grid-columns(2);
+					margin-top: 18px;
+				}
+				&.um {
+					margin-top: 18px;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	///// ENTRY /////
+	.entry {
+		margin-top: 180px;
+		article {
+			margin-left: 0;
+		}
+		header {
+			margin-bottom: 24px;
+		}
+		.gallery {
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	///// DO PRZEROBIENIA /////
+	.education, .blog, .collection {
+		.bricks-container-header {
+			margin-top: 0;
+		}
+	}
+
+}

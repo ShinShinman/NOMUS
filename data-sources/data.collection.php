@@ -15,17 +15,15 @@ class datasourcecollection extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
     
 
-    
+    public $dsParamFILTERS = array(
+        '79' => '{$tag}',
+    );
+        
 
     public $dsParamINCLUDEDELEMENTS = array(
         'title: formatted',
         'images',
-        'diescription: formatted',
-        'artist',
-        'creation-date: formatted',
-        'technic: formatted',
-        'tags',
-        'reflection'
+        'artist'
     );
     
     public $dsParamINCLUDEDASSOCIATIONS = array(
@@ -54,7 +52,7 @@ class datasourcecollection extends SectionDatasource
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-11-08T13:51:31+00:00'
+            'release-date' => '2017-11-22T16:23:15+00:00'
         );
     }
 

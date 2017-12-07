@@ -13,9 +13,11 @@ class datasourcenews_blog extends SectionDatasource
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
-    
 
-    
+    public $dsParamFILTERS = array(
+        '55' => 'yes',
+        '56' => 'yes',
+    );
 
     public $dsParamINCLUDEDELEMENTS = array(
         'title: formatted',
@@ -23,7 +25,6 @@ class datasourcenews_blog extends SectionDatasource
         'brick-image',
         'date: formatted'
     );
-    
 
     public function __construct($env = null, $process_params = true)
     {
@@ -37,10 +38,10 @@ class datasourcenews_blog extends SectionDatasource
             'name' => 'News blog',
             'author' => array(
                 'name' => 'Olaf Schindler',
-                'website' => 'http://localhost/nomus.gda.pl',
+                'website' => 'http://nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-23T13:30:55+00:00'
+            'release-date' => '2017-11-16T22:05:43+00:00'
         );
     }
 

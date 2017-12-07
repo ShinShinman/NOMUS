@@ -1,8 +1,8 @@
 <?php
 
-class datasourcehighlight extends SectionDatasource
+class datasourcecollection_item extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'highlight';
+    public $dsParamROOTELEMENT = 'collection-item';
     public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
@@ -10,23 +10,36 @@ class datasourcehighlight extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamREQUIREDPARAM = '$title';
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+    
+
+    public $dsParamFILTERS = array(
+        '73' => 'handle:{$title}',
+    );
+        
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'slogan: formatted',
-        'article'
+        'title: formatted',
+        'images',
+        'description: formatted',
+        'artist',
+        'creation-date: formatted',
+        'creation-place: formatted',
+        'technic: formatted',
+        'purchase-date',
+        'tags'
     );
     
     public $dsParamINCLUDEDASSOCIATIONS = array(
-        'article' => array(
-            'section_id' => '8',
-            'field_id' => '52',
+        'artist' => array(
+            'section_id' => '9',
+            'field_id' => '67',
             'elements' => array(
-                'title: formatted',
-                'subtitle: formatted',
-                'date: formatted'
+                'surname: formatted',
+                'firstname: formatted'
             )
         )
     );
@@ -40,19 +53,19 @@ class datasourcehighlight extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Highlight',
+            'name' => 'Collection item',
             'author' => array(
                 'name' => 'Olaf Schindler',
-                'website' => 'http://nomus.gda.pl',
+                'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-11-16T22:29:01+00:00'
+            'release-date' => '2017-11-16T10:27:36+00:00'
         );
     }
 
     public function getSource()
     {
-        return '1';
+        return '10';
     }
 
     public function allowEditorToParse()

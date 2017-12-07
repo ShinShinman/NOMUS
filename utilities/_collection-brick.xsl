@@ -20,23 +20,15 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<xsl:template name="highlight">
-		<section class="highlight">
-			<xsl:apply-templates select="highlight/entry" />
-		</section>
-	</xsl:template>
 
-	<xsl:template match="highlight/entry">
-	<article>
-		<a href="{$root}/{//current-language/@handle}/blog/{article/item/title/@handle}/">
-			<div>
-				<h4 class="subtitle"><xsl:value-of select="article/item/subtitle/p" /></h4>
-				<h4 class="date"><xsl:value-of select="article/item/date" /></h4>
-			</div>
-			<h1><xsl:copy-of select="slogan/p/node()" /></h1>
-			<h1>→</h1>
-		</a>
-	</article>
-</xsl:template>
+	<xsl:template name="collection-brick">
+		<article class="collection-brick">
+			<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/eksponat/{title/@handle}/">
+				<img src="{$workspace}{images/file/@path}/{images/file/filename}" />
+				<h1><xsl:copy-of select="title/p/node()" /></h1>
+				<h2><xsl:value-of select="concat(artist/item/firstname, ' ', artist/item/surname)" /></h2>
+			</a>
+		</article>
+	</xsl:template>
 
 </xsl:stylesheet>

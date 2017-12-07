@@ -1,8 +1,8 @@
 <?php
 
-class datasourcehighlight extends SectionDatasource
+class datasourcecollection_search extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'highlight';
+    public $dsParamROOTELEMENT = 'collection-search';
     public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
@@ -13,20 +13,27 @@ class datasourcehighlight extends SectionDatasource
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+    
+
+    public $dsParamFILTERS = array(
+        '84' => '{$url-keywords}',
+    );
+        
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'slogan: formatted',
-        'article'
+        'title: formatted',
+        'images',
+        'artist',
+        'search-index'
     );
     
     public $dsParamINCLUDEDASSOCIATIONS = array(
-        'article' => array(
-            'section_id' => '8',
-            'field_id' => '52',
+        'artist' => array(
+            'section_id' => '9',
+            'field_id' => '67',
             'elements' => array(
-                'title: formatted',
-                'subtitle: formatted',
-                'date: formatted'
+                'surname: formatted',
+                'firstname: formatted'
             )
         )
     );
@@ -40,19 +47,19 @@ class datasourcehighlight extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Highlight',
+            'name' => 'Collection Search',
             'author' => array(
                 'name' => 'Olaf Schindler',
-                'website' => 'http://nomus.gda.pl',
+                'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-11-16T22:29:01+00:00'
+            'release-date' => '2017-11-22T16:25:23+00:00'
         );
     }
 
     public function getSource()
     {
-        return '1';
+        return '10';
     }
 
     public function allowEditorToParse()

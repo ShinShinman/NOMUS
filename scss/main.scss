@@ -8,6 +8,7 @@
 @import 'pages';
 
 
+
 /*** NOMUS styles ***/
 
 html {
@@ -31,6 +32,7 @@ body {
 }
 
 section {
+	margin-bottom: $global-margin-bottom*2;
 	article {
 		@extend .text-column;
 	}
@@ -92,6 +94,10 @@ em {
 	}
 }
 
+.top-offset {
+	margin-top: 380px;
+}
+
 .icon {
 	font-family: 'Social';
 }
@@ -100,4 +106,4 @@ img {
 	vertical-align: bottom;
 }
 
-//@import 'media-queries';
+@import 'media-queries';
