@@ -47,7 +47,7 @@
 
 				<!-- Place favicon.ico in the root directory -->
 
-				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.3" />
+				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.4" />
 				<xsl:call-template name="ga" />
 			</head>
 			<body class="{$current-page} hyphenate">
