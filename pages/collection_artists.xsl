@@ -30,12 +30,19 @@
 			<h1>Zbiory</h1>
 			<xsl:call-template name="navigation-collection" />
 		</section>
-		<section>
-			<div class="alphabet">
-				<xsl:call-template name="alphabet" />
-			</div>
-			<xsl:call-template name="index" />
-		</section>
+		<xsl:choose>
+			<xsl:when test="$artist != ''">
+				<xsl:apply-templates select="collection-by-artist" />
+			</xsl:when>
+			<xsl:otherwise>
+				<section>
+					<div class="alphabet">
+						<xsl:call-template name="alphabet" />
+					</div>
+					<xsl:call-template name="index" />
+				</section>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template name="alphabet">
@@ -84,7 +91,7 @@
 
 	<xsl:template match="collection-artists/entry">
 		<article class="artist">
-			<h1><xsl:value-of select="surname" />, <xsl:value-of select="firstname" />&nbsp;<span class="dates">(<xsl:value-of select="substring(birdth-date, 1, 4)" />–<xsl:value-of select="substring(death-date, 1, 4)" />)</span></h1>
+			<h1><a href="{$root}{$current-path}/{surname/@handle}/"><xsl:value-of select="surname" />, <xsl:value-of select="firstname" /></a>&nbsp;<span class="dates">(<xsl:value-of select="substring(birdth-date, 1, 4)" />–<xsl:value-of select="substring(death-date, 1, 4)" />)</span></h1>
 		</article>
 	</xsl:template>
 
@@ -94,6 +101,35 @@
 		<meta property="og:title" content="{//article-collection/entry/title}" />
 		<meta property="og:description" content="{//article-collection/entry/subtitle}" />
 		<meta property="og:image" content="{$root}/image/4/600/315{//article-collection/entry/gallery-tmp/@path}/{//article-collection/entry/gallery-tmp/filename}" />
+	</xsl:template>
+
+	<xsl:template match="collection-by-artist">
+		<section>
+			<article>
+				<h1><xsl:value-of select="concat(entry/artist/item/firstname, ' ', entry/artist/item/surname)" /></h1>
+			</article>
+		</section>
+		<section class="bricks-container">
+			<xsl:apply-templates select="entry" />
+		</section>
+		<script>
+			window.onload = function () {
+				var msnry = new Masonry( '.bricks-container', {
+					itemSelector: '.brick, .collection-brick',
+					gutter: 30
+				});
+			}
+		</script>
+	</xsl:template>
+
+	<xsl:template match="collection-by-artist/entry">
+		<article class="collection-brick">
+			<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/eksponat/{title/@handle}/">
+				<img src="{$workspace}{images/file/@path}/{images/file/filename}" />
+				<h1><xsl:copy-of select="title/p/node()" /></h1>
+				<h2><xsl:value-of select="concat(artist/item/firstname, ' ', artist/item/surname)" /></h2>
+			</a>
+		</article>
 	</xsl:template>
 
 	<xsl:template match="data" mode="js">

@@ -43,7 +43,7 @@
 				</div>
 				<div>
 					<h1><xsl:copy-of select="title/p/node()" /></h1>
-					<h2><xsl:value-of select="concat(artist/item/firstname, ' ', artist/item/surname)" /></h2>
+					<h2><a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/artysci/{artist/item/surname/@handle}/"><xsl:value-of select="concat(artist/item/firstname, ' ', artist/item/surname)" /></a></h2>
 					<p><xsl:value-of select="creation-date" /></p>
 					<p><xsl:value-of select="creation-place" /></p>
 					<p><xsl:value-of select="technic" /></p>
