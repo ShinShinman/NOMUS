@@ -16,7 +16,7 @@ class datasourcecollection_search extends SectionDatasource
     
 
     public $dsParamFILTERS = array(
-        '84' => '{$url-keywords}',
+        '85' => '{$url-keywords}',
     );
         
 
@@ -53,7 +53,7 @@ class datasourcecollection_search extends SectionDatasource
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-11-22T16:25:23+00:00'
+            'release-date' => '2017-12-08T16:56:15+00:00'
         );
     }
 
