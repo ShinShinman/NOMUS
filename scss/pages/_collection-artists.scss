@@ -5,3 +5,28 @@
 		font-size: 24px;
 	}
 }
+.artists {
+	.alphabet {
+		text-align: center;
+		color: $yellow;
+		letter-spacing: 2.5px;
+		margin-bottom: $global-margin-bottom*2;
+		a {
+			font-size: 30px;
+			&.disabled {
+				color: lightgrey;
+			}
+		}
+	}
+	.index { 
+		margin-top: -250px;
+		padding-top: 250px;
+		margin-bottom: $global-margin-bottom;
+
+		h4 {
+			@extend .text-column;
+			margin-top: $global-margin-bottom/2;
+			margin-bottom: 0;
+		}
+	}
+}

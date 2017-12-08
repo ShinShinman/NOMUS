@@ -31,8 +31,55 @@
 			<xsl:call-template name="navigation-collection" />
 		</section>
 		<section>
-			<xsl:apply-templates select="collection-artists/entry" />
+			<div class="alphabet">
+				<xsl:call-template name="alphabet" />
+			</div>
+			<xsl:call-template name="index" />
 		</section>
+	</xsl:template>
+
+	<xsl:template name="alphabet">
+		<xsl:param name="text" select="'AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ'" />
+		<xsl:if test="$text != ''">
+			<xsl:variable name="letter" select="substring($text, 1, 1)" />
+			<xsl:variable name="occurs" select="count(//collection-artists/entry[substring(surname, 1, 1) = $letter])" />
+			<a href="#{$letter}">
+				<xsl:if test="$occurs = 0">
+					<xsl:attribute name="class">disabled</xsl:attribute>
+				</xsl:if>
+				<xsl:value-of select="$letter" /><xsl:text> </xsl:text>
+			</a>
+			<xsl:text> </xsl:text>
+			<xsl:call-template name="alphabet">
+				<xsl:with-param name="text" select="substring-after($text, $letter)" />
+			</xsl:call-template>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template name="index">
+		<xsl:param name="text" select="'AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ'" />
+		<xsl:if test="$text != ''">
+			<xsl:variable name="letter" select="substring($text, 1, 1)" />
+			
+			<xsl:call-template name="artistsss">
+				<xsl:with-param name="head" select="$letter" />
+			</xsl:call-template>
+
+			<xsl:call-template name="index">
+				<xsl:with-param name="text" select="substring-after($text, $letter)" />
+			</xsl:call-template>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template name="artistsss">
+		<xsl:param name="head" />
+		<xsl:variable name="occurs" select="count(//collection-artists/entry[substring(surname, 1, 1) = $head])" />
+		<xsl:if test="$occurs &gt; 0">
+			<div id="{$head}" class="index">
+				<!-- <h4><xsl:value-of select="$head" /></h4> -->
+				<xsl:apply-templates select="//collection-artists/entry[substring(surname, 1, 1) = $head]" />
+			</div>
+		</xsl:if>
 	</xsl:template>
 
 	<xsl:template match="collection-artists/entry">
@@ -47,6 +94,23 @@
 		<meta property="og:title" content="{//article-collection/entry/title}" />
 		<meta property="og:description" content="{//article-collection/entry/subtitle}" />
 		<meta property="og:image" content="{$root}/image/4/600/315{//article-collection/entry/gallery-tmp/@path}/{//article-collection/entry/gallery-tmp/filename}" />
+	</xsl:template>
+
+	<xsl:template match="data" mode="js">
+		<script>
+			$(function() {
+				var alphaLinks = $('.alphabet a:not(.disabled)');
+				alphaLinks.each(function(i, trg) {
+					$(this).click(function(e) {
+						e.preventDefault();
+						console.log($(this).attr('href'));
+						$('html, body').animate({
+							scrollTop: $('div'+$(this).attr('href')).offset().top
+						}, 'slow');
+					})
+				})
+			})
+		</script>
 	</xsl:template>
 
 </xsl:stylesheet>

@@ -807,6 +807,24 @@ a:hover {
 .artist .dates {
   font-size: 24px; }
 
+.artists .alphabet {
+  text-align: center;
+  color: #d7cc60;
+  letter-spacing: 2.5px;
+  margin-bottom: 48px; }
+  .artists .alphabet a {
+    font-size: 30px; }
+    .artists .alphabet a.disabled {
+      color: lightgrey; }
+
+.artists .index {
+  margin-top: -250px;
+  padding-top: 250px;
+  margin-bottom: 24px; }
+  .artists .index h4 {
+    margin-top: 12px;
+    margin-bottom: 0; }
+
 .tag {
   background-color: #d7cc60;
   border-radius: 2px;
@@ -871,7 +889,7 @@ body {
   min-height: 100vh;
   overflow: auto; }
 
-.text-column, section article {
+.text-column, .artists .index h4, section article {
   width: 632.66667px;
   margin-left: 248.5px; }
 
@@ -941,7 +959,7 @@ img {
     font-size: 21px; }
   .row, section, .page-header .logo, .page-header nav {
     width: 632.66667px; }
-  .text-column, section article {
+  .text-column, .artists .index h4, section article {
     width: 632.66667px; }
   .page-header .logo img.logo-n {
     height: 105px; }
@@ -1002,7 +1020,7 @@ img {
     font-size: 21px; }
   .row, section, .page-header .logo, .page-header nav {
     width: 301.33333px; }
-  .text-column, section article {
+  .text-column, .artists .index h4, section article {
     width: 301.33333px; }
   .page-header {
     margin-top: 2px; }
