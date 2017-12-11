@@ -11,10 +11,6 @@ footer {
 	.newsletter {
 		margin-bottom: 2 * $global-margin-bottom;
 
-		///// TMP /////
-		display: none;
-		///////////////
-
 		form {
 			width: grid-columns(6);
 			margin-left: auto;
@@ -22,6 +18,10 @@ footer {
 			background-color: black;
 			position: relative;
 			color: white;
+			overflow: auto;
+
+			margin-top: $global-margin-bottom;
+			margin-bottom: $global-margin-bottom;
 
 			input {
 				background-color: black;
@@ -32,8 +32,29 @@ footer {
 				width: 100%;
 				border-bottom: 2px solid white;
 
+				&:-webkit-autofill {
+					background-color: black !important;
+					color: white !important;
+				}
+				&:-webkit-autofill:focus {
+					background-color: black !important;
+					color: white !important;
+				}
+
 				&:focus {
 					outline: none;
+					&::-webkit-input-placeholder {
+						color: transparent;
+					}
+					&:-moz-placeholder {
+						color: transparent;
+					}
+					&::-moz-placeholder {
+						color: transparent;
+					}
+					&:-ms-input-placeholder {
+						color: transparent;
+					}
 				}
 
 				&[type="submit"] {
