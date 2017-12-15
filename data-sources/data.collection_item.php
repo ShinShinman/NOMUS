@@ -24,7 +24,7 @@ class datasourcecollection_item extends SectionDatasource
     public $dsParamINCLUDEDELEMENTS = array(
         'title: formatted',
         'images',
-        'diescription: formatted',
+        'description: formatted',
         'artist',
         'creation-date: formatted',
         'creation-place: formatted',
@@ -59,7 +59,7 @@ class datasourcecollection_item extends SectionDatasource
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-12-15T15:29:17+00:00'
+            'release-date' => '2017-12-15T19:48:43+00:00'
         );
     }
 
