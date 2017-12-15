@@ -18,15 +18,37 @@ section.collection-item {
 				margin-top: $global-margin-bottom;
 			}
 		}
-		div {
+		&> div {
 			width: grid-columns(6);
 			margin-right: $gutter;
+			margin-bottom: $global-margin-bottom;
+
 			&:last-of-type {
 				margin-right: 0;
 			}
 		}
 		img {
 			width: 100%;
+		}
+
+		.gallery-top {
+			margin-bottom: $global-margin-bottom;
+		}
+
+		.gallery-thumbs {
+			@extend .floater;
+			.thumbnail {
+				width: grid-columns(2);
+				height: 90px;
+				overflow: hidden;
+				margin-right: $gutter;
+				margin-bottom: $global-margin-bottom;
+				cursor: pointer;
+
+				&:nth-of-type(3n+3) {
+					margin-right: 0;
+				}
+			}
 		}
 	}
 }

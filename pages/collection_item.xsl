@@ -38,8 +38,22 @@
 	<xsl:template match="collection-item/entry">
 		<section class="collection-item">
 			<header>
+				<!--
 				<div>
 					<img src="{$workspace}{images/file/@path}/{images/file/filename}" alt=""/>
+				</div>
+			-->
+				<div class="gallery">
+					<div class="swiper-container gallery-top">
+						<div class="swiper-wrapper">
+							<xsl:apply-templates select="images/file" />
+						</div>
+					</div>
+					<xsl:if test="count(images/file) &gt; 1">
+						<div class="gallery-thumbs">
+							<xsl:apply-templates select="images/file" mode="thumb" />
+						</div>
+					</xsl:if>
 				</div>
 				<div>
 					<h1><xsl:copy-of select="title/p/node()" /></h1>
@@ -56,12 +70,40 @@
 		</section>
 	</xsl:template>
 
+	<xsl:template match="images/file">
+		<div class="swiper-slide">
+			<img src="{$workspace}{@path}/{filename}" alt=""/>
+		</div>
+	</xsl:template>
+
+	<xsl:template match="images/file" mode="thumb" >
+		<div class="thumbnail">
+			<img src="{$workspace}{@path}/{filename}" alt=""/>
+		</div>
+	</xsl:template>
+
 	<xsl:template match="tags">
 		<p class="tags"><xsl:apply-templates select="item" /></p>
 	</xsl:template>
 
 	<xsl:template match="tags/item">
 		<span class="tag"><a href="{$root}/{//current-language/@handle}/zbiory/nasze-tagi/{@handle}"><xsl:text> #</xsl:text><xsl:value-of select="." /></a></span>
+	</xsl:template>
+
+	<xsl:template match="data" mode="js">
+		<script>
+			$(document).ready(function () {
+				var galleryTop = new Swiper ('.gallery-top', {
+					spaceBetween: 30
+				});
+				var thumbnails = $('.gallery-thumbs .thumbnail');
+				thumbnails.each(function(i) {
+					$(this).click(function(){
+						galleryTop.slideTo(i);
+					});
+				})
+			});
+		</script>
 	</xsl:template>
 
 </xsl:stylesheet>

@@ -7,6 +7,7 @@
      * 2. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
+@import url(../node_modules/swiper/dist/css/swiper.min.css);
 html {
   line-height: 1.15;
   /* 1 */
@@ -872,13 +873,25 @@ section.collection-item header:not(.logo) {
     margin-bottom: 0; }
     section.collection-item header:not(.logo) p.tags {
       margin-top: 24px; }
-  section.collection-item header:not(.logo) div {
+  section.collection-item header:not(.logo) > div {
     width: 467px;
-    margin-right: 30px; }
-    section.collection-item header:not(.logo) div:last-of-type {
+    margin-right: 30px;
+    margin-bottom: 24px; }
+    section.collection-item header:not(.logo) > div:last-of-type {
       margin-right: 0; }
   section.collection-item header:not(.logo) img {
     width: 100%; }
+  section.collection-item header:not(.logo) .gallery-top {
+    margin-bottom: 24px; }
+  section.collection-item header:not(.logo) .gallery-thumbs .thumbnail {
+    width: 135.66667px;
+    height: 90px;
+    overflow: hidden;
+    margin-right: 30px;
+    margin-bottom: 24px;
+    cursor: pointer; }
+    section.collection-item header:not(.logo) .gallery-thumbs .thumbnail:nth-of-type(3n+3) {
+      margin-right: 0; }
 
 .collection-search form {
   width: 632.66667px;
@@ -946,10 +959,10 @@ strong, b {
 em {
   font-style: italic; }
 
-.floater > *, .page-header nav div.slogan > *, .highlight article div > *, footer .footer > *, footer .logos > *, section.collection-item header:not(.logo) > * {
+.floater > *, .page-header nav div.slogan > *, .highlight article div > *, footer .footer > *, footer .logos > *, section.collection-item header:not(.logo) > *, section.collection-item header:not(.logo) .gallery-thumbs > * {
   float: left; }
 
-.floater:after, .page-header nav div.slogan:after, .highlight article div:after, footer .footer:after, footer .logos:after, section.collection-item header:not(.logo):after {
+.floater:after, .page-header nav div.slogan:after, .highlight article div:after, footer .footer:after, footer .logos:after, section.collection-item header:not(.logo):after, section.collection-item header:not(.logo) .gallery-thumbs:after {
   clear: left;
   content: "";
   display: table; }
