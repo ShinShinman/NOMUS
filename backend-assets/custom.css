@@ -7,3 +7,10 @@ textarea.size-small .CodeMirror {
 textarea.size-small .CodeMirror .CodeMirror-scroll {
   min-height: 100px !important;
 }
+
+#field-89 input {
+  height: auto;
+	font-size: 24px;
+  font-weight: bold;
+  border: none;
+}
