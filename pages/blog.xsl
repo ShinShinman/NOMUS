@@ -30,7 +30,7 @@
 			<xsl:apply-templates select="article-blog/entry" />
 		</xsl:when>
 		<xsl:otherwise>
-			<h1>YSZT!</h1>
+			<!--<h1>YSZT!</h1>-->
 		</xsl:otherwise>
 	</xsl:choose>
 	
@@ -42,13 +42,17 @@
 	<section class="entry">
 		<article>
 			<header>
-				<h5 class="category">blog</h5>
+				<h5>
+					<xsl:attribute name="class">category <xsl:value-of select="category/item/category/@handle-en" /></xsl:attribute>
+					<xsl:value-of select="category/item/category" />
+				</h5>
 				<h1><xsl:value-of select="title" /></h1>
 				<h3><xsl:copy-of select="subtitle/p/node()" /></h3>
 				<h2><xsl:value-of select="date" /></h2>
 				<xsl:apply-templates select="place" />
 			</header>
-			<xsl:apply-templates select="gallery-tmp" />
+			<!--<xsl:apply-templates select="gallery-tmp" />-->
+			<xsl:apply-templates select="gallery" />
 			<xsl:copy-of select="post/node()" />
 		</article>
 	</section>
@@ -61,6 +65,25 @@
 
 <xsl:template match="place">
 	<p class="place"><xsl:value-of select="." /></p>
+</xsl:template>
+
+<xsl:template match="gallery">
+	<div class="gallery">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<xsl:apply-templates select="file" />
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+		<p class="image-caption"><xsl:copy-of select="../image-caption/node()" /></p>
+	</div>
+</xsl:template>
+
+<xsl:template match="gallery/file">
+	<div class="swiper-slide">
+		<img src="{$workspace}{@path}/{filename}" alt=""/>
+	</div>
 </xsl:template>
 
 <xsl:template match="gallery-tmp">
@@ -97,7 +120,17 @@
 
 <xsl:template match="data" mode="js">
 	<script>
-		console.log('Home');
+
+		$(document).ready(function () {
+			var swiper = new Swiper('.swiper-container', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        keyboard: true,
+        loop: true
+	    });
+		});
 
 		window.onload = function () {
 			var msnry = new Masonry( '.bricks-container', {

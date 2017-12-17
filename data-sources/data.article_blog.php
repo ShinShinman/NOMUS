@@ -25,8 +25,10 @@ class datasourcearticle_blog extends SectionDatasource
         'title: formatted',
         'subtitle: formatted',
         'post: formatted',
+        'category',
         'date: formatted',
         'place: formatted',
+        'gallery',
         'gallery-tmp',
         'image-caption: formatted',
         'partners'
@@ -39,6 +41,13 @@ class datasourcearticle_blog extends SectionDatasource
             'elements' => array(
                 'link: formatted',
                 'logo'
+            )
+        ),
+        'category' => array(
+            'section_id' => '11',
+            'field_id' => '91',
+            'elements' => array(
+                'category: formatted'
             )
         )
     );
@@ -58,7 +67,7 @@ class datasourcearticle_blog extends SectionDatasource
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-10-23T14:46:11+00:00'
+            'release-date' => '2017-12-17T18:08:59+00:00'
         );
     }
 

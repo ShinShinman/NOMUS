@@ -794,15 +794,32 @@ footer {
       margin-bottom: 0; }
   .entry .category {
     margin-bottom: 0;
-    color: #4978d7; }
+    text-transform: uppercase; }
+    .entry .category.blog {
+      color: #4978d7; }
+    .entry .category.education {
+      color: #4978d7; }
+    .entry .category.collection {
+      color: #d7cc60; }
   .entry .place {
     font-weight: bold;
     font-size: 21px; }
   .entry .gallery {
+    width: 467px;
+    margin-left: 0;
     margin-bottom: 48px; }
     .entry .gallery img {
-      width: 467px;
+      width: 100%;
       margin-bottom: 12px; }
+    .entry .gallery .swiper-button-next, .entry .gallery .swiper-button-prev {
+      background-image: none;
+      top: 10%;
+      width: 50%;
+      height: 90%; }
+    .entry .gallery .swiper-button-next {
+      cursor: url("../images/arrow-next.svg") 4 12, auto; }
+    .entry .gallery .swiper-button-prev {
+      cursor: url("../images/arrow-prev.svg") 0 0, auto; }
     .entry .gallery p {
       color: grey;
       font-size: 14px; }

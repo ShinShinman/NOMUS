@@ -13,7 +13,17 @@
 
 	.category {
 		margin-bottom: 0;
-		color: $blue;
+		text-transform: uppercase;
+		&.blog {
+			color: $blue;
+		}
+		&.education {
+			color: $blue;
+		}
+		&.exhibition {}
+		&.collection {
+			color: $yellow;
+		}
 	}
 
 	.place {
@@ -22,11 +32,26 @@
 	}
 
 	.gallery {
+		width: grid-columns(6);
+		margin-left: 0;
 		margin-bottom: 2 * $global-margin-bottom;
 
 		img {
-			width: grid-columns(6);
+			width: 100%;
 			margin-bottom: 0.5 * $global-margin-bottom;
+		}
+
+		.swiper-button-next, .swiper-button-prev {
+			background-image: none;
+			top: 10%;
+			width: 50%;
+			height: 90%;
+		}
+		.swiper-button-next {
+			cursor: url('../images/arrow-next.svg') 4 12, auto;
+		}
+		.swiper-button-prev {
+			cursor: url('../images/arrow-prev.svg') 0 0, auto;
 		}
 
 		p {
