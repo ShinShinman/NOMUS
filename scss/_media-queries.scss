@@ -160,6 +160,12 @@
 					width: 100%;
 					top: 2px;
 				}
+				&#logo-mob {
+					display: block;
+				}
+				&:not(#logo-mob) {
+					display: none;
+				}
 				&.logo-nomus {
 				width: 100%;
 				}

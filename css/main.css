@@ -554,6 +554,8 @@ section:last-of-type {
   overflow: visible; }
   .page-header .logo {
     margin-bottom: 48px; }
+    .page-header .logo img#logo-mob {
+      display: none; }
     .page-header .logo img.logo-n {
       position: fixed;
       top: 30px; }
@@ -1095,6 +1097,10 @@ img {
       .page-header .logo img.logo-n {
         width: 100%;
         top: 2px; }
+      .page-header .logo img#logo-mob {
+        display: block; }
+      .page-header .logo img:not(#logo-mob) {
+        display: none; }
       .page-header .logo img.logo-nomus {
         width: 100%; }
     .page-header nav {

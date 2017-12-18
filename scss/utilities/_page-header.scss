@@ -12,10 +12,13 @@
 		margin-bottom: 2 * $global-margin-bottom;
 
 		img {
-		}
-		img.logo-n {
-			position: fixed;
-			top: 30px;
+			&#logo-mob {
+				display: none;
+			}
+			&.logo-n {
+				position: fixed;
+				top: 30px;
+			}
 		}
 	}
 

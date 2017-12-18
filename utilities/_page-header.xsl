@@ -23,7 +23,7 @@
 	<xsl:template name="page-header">
 		<section class="page-header">
 			<header class="logo">
-				<a href="{$root}"><img src="{$workspace}/images/n-mob.svg" class="logo-n" /></a>
+				<a href="{$root}"><img src="{$workspace}/images/n.svg" class="logo-n" /><img src="{$workspace}/images/n-mob.svg" id="logo-mob" class="logo-n" /></a>
 				<img src="{$workspace}/images/nomus.svg" class="logo-nomus" />
 			</header>
 			<nav>
