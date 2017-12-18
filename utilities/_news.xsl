@@ -28,21 +28,11 @@
 		</section>
 
 		<section class="bricks-container">
-			<xsl:apply-templates select="//news-education/entry | //news-collection/entry | //news-blog/entry">
-				<xsl:sort select="date" order="descending" />
-			</xsl:apply-templates>
+			<xsl:apply-templates select="//news/entry" />
 		</section>
 	</xsl:template>
 
-	<xsl:template match="news-education/entry">
-		<xsl:call-template name="brick" />
-	</xsl:template>
-
-	<xsl:template match="news-collection/entry">
-		<xsl:call-template name="brick" />
-	</xsl:template>
-
-	<xsl:template match="news-blog/entry">
+	<xsl:template match="news/entry">
 		<xsl:call-template name="brick" />
 	</xsl:template>
 

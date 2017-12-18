@@ -128,7 +128,7 @@
           prevEl: '.swiper-button-prev',
         },
         keyboard: true,
-        loop: true
+        loop: false
 	    });
 		});
 

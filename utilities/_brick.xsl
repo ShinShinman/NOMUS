@@ -42,8 +42,10 @@
 			</xsl:choose>
 		</xsl:variable>
 
-		<article class="brick {../section/@handle}">
+
+		<article class="brick {category/item/category/@handle-en}">
 			<a href="{$root}/{//current-language/@handle}/{$section}/{title/@handle}/">
+				<h5 class="category {category/item/category/@handle-en}"><xsl:value-of select="category/item/category" /></h5>
 				<xsl:if test="brick-image">
 					<img src="{$workspace}{brick-image/@path}/{brick-image/filename}" alt="" />
 				</xsl:if>

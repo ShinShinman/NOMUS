@@ -16,18 +16,28 @@
 	}
 	.brick {
 		width: grid-columns(6);
-		min-height: 550px;
+		min-height: 560px;
 		margin-left: 0;
 		margin-bottom: 2 * $global-margin-bottom;
 
-		&.news-education {
+		&.education {
 			a:hover {
-				color: $blue;
+				color: $education-color;
 			}
 		}
-		&.news-collection {
+		&.collection {
 			a:hover {
-				color: $yellow;
+				color: $collection-color;
+			}
+		}
+		&.blog {
+			a:hover {
+				color: $blog-color;
+			}
+		}
+		&.exhibitions {
+			a:hover {
+				color: $exhibitions-color;
 			}
 		}
 
@@ -53,6 +63,23 @@
 		p.date {
 			font-size: 30px;
 			//font-weight: bold;
+		}
+		.category {
+			text-transform: uppercase;
+			margin-bottom: 0;
+
+			&.blog {
+				color: $blog-color;
+			}
+			&.education {
+				color: $education-color;
+			}
+			&.collection {
+				color: $collection-color;
+			}
+			&.exhibitions {
+				color: $exhibitions-color;
+			}
 		}
 	}
 }

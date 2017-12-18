@@ -1,29 +1,42 @@
 <?php
 
-class datasourcenews_blog extends SectionDatasource
+class datasourcenews extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'news-blog';
-    public $dsParamORDER = 'desc';
+    public $dsParamROOTELEMENT = 'news';
+    public $dsParamORDER = 'asc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'system:id';
+    public $dsParamSORT = 'order';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+    
 
     public $dsParamFILTERS = array(
         '55' => 'yes',
         '56' => 'yes',
     );
+        
 
     public $dsParamINCLUDEDELEMENTS = array(
         'title: formatted',
         'subtitle: formatted',
         'brick-image',
+        'category',
         'date: formatted'
+    );
+    
+    public $dsParamINCLUDEDASSOCIATIONS = array(
+        'category' => array(
+            'section_id' => '11',
+            'field_id' => '91',
+            'elements' => array(
+                'category: formatted'
+            )
+        )
     );
 
     public function __construct($env = null, $process_params = true)
@@ -35,13 +48,13 @@ class datasourcenews_blog extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'News blog',
+            'name' => 'News',
             'author' => array(
                 'name' => 'Olaf Schindler',
-                'website' => 'http://nomus.gda.pl',
+                'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-11-16T22:05:43+00:00'
+            'release-date' => '2017-12-18T16:41:21+00:00'
         );
     }
 
