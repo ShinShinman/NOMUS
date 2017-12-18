@@ -16,6 +16,10 @@ section.collection-item {
 			margin-bottom: 0;
 			&.tags {
 				margin-top: $global-margin-bottom;
+				line-height: 2;
+				.tag {
+					white-space: nowrap;
+				}
 			}
 		}
 		&> div {

@@ -60,7 +60,7 @@
 	<xsl:template match="collection">
 		<section>
 			<article>
-				<h1 class="tag-header">#<xsl:value-of select="//collection-tags/entry[tags/item/@handle = $tag][1]/tags/item" /></h1>
+				<h1 class="tag-header">#<xsl:value-of select="//collection-tags/entry[tags/item/@handle = //params/tag][1]/tags/item[@handle = //params/tag]" /></h1>
 			</article>
 		</section>
 		<section class="bricks-container">

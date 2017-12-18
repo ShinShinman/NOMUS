@@ -906,7 +906,10 @@ section.collection-item header:not(.logo) {
   section.collection-item header:not(.logo) p {
     margin-bottom: 0; }
     section.collection-item header:not(.logo) p.tags {
-      margin-top: 24px; }
+      margin-top: 24px;
+      line-height: 2; }
+      section.collection-item header:not(.logo) p.tags .tag {
+        white-space: nowrap; }
   section.collection-item header:not(.logo) > div {
     width: 467px;
     margin-right: 30px;
