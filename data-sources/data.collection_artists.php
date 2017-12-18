@@ -21,7 +21,8 @@ class datasourcecollection_artists extends SectionDatasource
         'surname: formatted',
         'firstname: formatted',
         'birdth-date',
-        'death-date'
+        'date-of-birth',
+        'date-of-death'
     );
     
 
@@ -40,7 +41,7 @@ class datasourcecollection_artists extends SectionDatasource
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-12-08T13:40:13+00:00'
+            'release-date' => '2017-12-18T19:17:45+00:00'
         );
     }
 
