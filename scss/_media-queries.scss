@@ -24,6 +24,26 @@
 		width: grid-columns(8);
 	}
 
+	///// MAIN MENU /////
+	.main-menu {
+		left: 0;
+
+		.menu {
+			article {
+				width: grid-columns(8);
+			}
+		}
+
+		.newsletter {
+			margin-left: grid-columns(1) + $gutter;
+			float: none !important;
+		}
+		.news {
+			margin-left: grid-columns(1) + $gutter;
+			margin-right: grid-columns(1) + $gutter;
+		}
+	}
+
 	///// PAGE HEADER /////
 	.page-header {
 		.logo {
@@ -45,6 +65,7 @@
 				}
 				.menu-trigger {
 					width: grid-columns(1);
+					margin-left: grid-columns(7);
 					a {
 						margin-top: 4px;
 					}

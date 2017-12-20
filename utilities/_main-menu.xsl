@@ -49,8 +49,8 @@
 			-->
 			<section class="menu">
 				<article>
-					<ul>
-						<li class="newsletter">
+					<ul class="newsletter">
+						<li>
 							<form action="https://gda.us17.list-manage.com/subscribe/post?u=c6a57201c76eaa020f0a3c76a&amp;id=60e894667d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
 								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Newsletter" autocomplete="off" />
 								<div id="mce-responses" class="clear">
@@ -63,14 +63,14 @@
 						</li>
 						<!--<li class="mailto"><h4><a href="mailto:nomus@gda.pl">nomus@gda.pl</a></h4></li>-->
 					</ul>
-					<ul>
+					<ul class="news">
 						<li><h3><a href="{$root}/">Aktualności</a></h3></li>
 						<li><h3><a href="{$root}/{//current-language/@handle}/zbiory/">Zbiory</a></h3></li>
 						<li><h3><a href="{$root}/{//current-language/@handle}/o-nas/">O nas</a></h3></li>
 						<li><h3><a href="{$root}/{//current-language/@handle}/blog/nomus-manifest/">Manifest</a></h3></li>
 						<li><h3><a href="{$root}/{//current-language/@handle}/kontakt/">Kontakt</a></h3></li>
 					</ul>
-					<ul>
+					<ul class="media">
 						<li><h3><a href="https://www.facebook.com/nomus.gd/" target="_blank">Facebook</a></h3></li>
 						<li><h3><a href="https://twitter.com/nomus_gdansk/" target="_blank">Twitter</a></h3></li>
 						<li><h3><a href="https://www.instagram.com/nomus.gdansk/" target="_blank">Instagram</a></h3></li>
