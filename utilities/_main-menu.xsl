@@ -21,14 +21,85 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:template name="main-menu">
-		<section class="main-menu">
-			<article>
-				<h2><a href="{$root}/">Aktualności</a></h2>
-				<h2><a href="{$root}/{//current-language/@handle}/zbiory/">Zbiory</a></h2>
-				<h2><a href="{$root}/{//current-language/@handle}/o-nas/">O nas</a></h2>
-				<h2><a href="{$root}/{//current-language/@handle}/kontakt/">Kontakt</a></h2>
-			</article>
-		</section>
+		<div class="main-menu">
+			<section class="page-header">
+				<header class="logo">
+					<a href="{$root}"><img src="{$workspace}/images/n-mob.svg" class="logo-n" /></a>
+					<img src="{$workspace}/images/nomus.svg" class="logo-nomus" />
+				</header>
+				<nav>
+					<!--<div class="menu-anchor" />-->
+					<div class="slogan">
+						<div class="menu-trigger"><a href="javascript:void(0)">M</a></div>
+					</div>
+				</nav>
+			</section>
+			<!--
+			<section class="newsletter">
+				<form action="https://gda.us17.list-manage.com/subscribe/post?u=c6a57201c76eaa020f0a3c76a&amp;id=60e894667d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Prenumeruj newsletter NOMUS" />
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c6a57201c76eaa020f0a3c76a_60e894667d" tabindex="-1" value="" /></div>
+					<input type="submit" value="→" name="subscribe" id="mc-embedded-subscribe" />
+				</form>
+			</section>
+			-->
+			<section class="menu">
+				<article>
+					<ul>
+						<li class="newsletter">
+							<form action="https://gda.us17.list-manage.com/subscribe/post?u=c6a57201c76eaa020f0a3c76a&amp;id=60e894667d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
+								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Newsletter" autocomplete="off" />
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>
+								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c6a57201c76eaa020f0a3c76a_60e894667d" tabindex="-1" value="" /></div>
+								<input type="submit" value="→" name="subscribe" id="mc-embedded-subscribe" />
+							</form>
+						</li>
+						<!--<li class="mailto"><h4><a href="mailto:nomus@gda.pl">nomus@gda.pl</a></h4></li>-->
+					</ul>
+					<ul>
+						<li><h3><a href="{$root}/">Aktualności</a></h3></li>
+						<li><h3><a href="{$root}/{//current-language/@handle}/zbiory/">Zbiory</a></h3></li>
+						<li><h3><a href="{$root}/{//current-language/@handle}/o-nas/">O nas</a></h3></li>
+						<li><h3><a href="{$root}/{//current-language/@handle}/blog/nomus-manifest/">Manifest</a></h3></li>
+						<li><h3><a href="{$root}/{//current-language/@handle}/kontakt/">Kontakt</a></h3></li>
+					</ul>
+					<ul>
+						<li><h3><a href="https://www.facebook.com/nomus.gd/" target="_blank">Facebook</a></h3></li>
+						<li><h3><a href="https://twitter.com/nomus_gdansk/" target="_blank">Twitter</a></h3></li>
+						<li><h3><a href="https://www.instagram.com/nomus.gdansk/" target="_blank">Instagram</a></h3></li>
+						<li><h3><a href="https://vimeo.com/nomus/" target="_blank">Vimeo</a></h3></li>
+					</ul>
+					
+					<!--
+					<ul>
+						<li><h5><a href="#">Blog</a></h5></li>
+						<li><h5><a href="#">Kolekcja</a></h5></li>
+						<li><h5><a href="#">Edukacja</a></h5></li>
+						<li><h5><a href="#">Wystawy</a></h5></li>
+					</ul>
+					-->
+					<!--
+					<ul>
+						<li><h4><a href="{$root}/{//current-language/@handle}/zbiory/">Zbiory</a></h4></li>
+						<li><h5><a href="#">Artyści</a></h5></li>
+						<li><h5><a href="#">Nasze tagi</a></h5></li>
+						<li><h5><a href="#">Wyszukiwarka</a></h5></li>
+					</ul>
+					<ul>
+						<li><h4><a href="{$root}/{//current-language/@handle}/o-nas/">O nas</a></h4></li>
+						<li><h4><a href="{$root}/{//current-language/@handle}/kontakt/">Kontakt</a></h4></li>
+					</ul>
+				-->
+				</article>
+			</section>
+		</div>
 	</xsl:template>
 
 </xsl:stylesheet>

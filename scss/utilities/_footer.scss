@@ -88,6 +88,18 @@ footer {
 			float: left;
 			margin-right: 30px;
 		}
+		.issuu {
+			a {
+				display: block;
+				width: 14px;
+				height: 16px;
+				background-image: url($css-images-path + 'issuu-logo.png');
+				background-repeat: no-repeat;
+				background-position: 0 2px;
+				background-size: 14px;
+				@include hide-text;
+			}
+		}
 
 		& > ul {
 			width: grid-columns(4);
