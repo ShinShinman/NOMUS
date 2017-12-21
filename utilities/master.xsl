@@ -47,7 +47,7 @@
 
 				<!-- Place favicon.ico in the root directory -->
 
-				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.6" />
+				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.7" />
 				<xsl:call-template name="ga" />
 			</head>
 			<body class="{$current-page} hyphenate">
@@ -104,26 +104,30 @@
 						}
 
 						//menu triger
-						var menuTrigger = $('.menu-trigger a');
+						var menuTriggerParent = $('.menu-trigger');
+						var menuTrigger = menuTriggerParent.find('a');
 						var mainMenu = $('.main-menu');
+						var body = $('body');
 						var mainMenuExtended = false;
+						console.log(menuTrigger);
 
 						function mainMenuToggle() {
 							if (mainMenuExtended) {
 								mainMenuExtended = false;
 								mainMenu.fadeOut();
 								menuTrigger.css('background-position', 'top');
+								body.removeClass('stop-scrolling');
 							} else {
 								mainMenuExtended = true;
 								mainMenu.fadeIn();
 								menuTrigger.css('background-position', 'bottom');
+								body.addClass('stop-scrolling');
 							}
 						}
 
 						menuTrigger.click(function(e) {
 							e.preventDefault();
 							mainMenuToggle();
-							console.log ('CLiCK');
 						})
 						
 					})

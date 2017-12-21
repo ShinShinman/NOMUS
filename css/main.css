@@ -1098,6 +1098,10 @@ em {
 .icon {
   font-family: 'Social'; }
 
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden; }
+
 img {
   vertical-align: bottom; }
 
@@ -1187,17 +1191,37 @@ img {
     width: 301.33333px; }
   .text-column, .artists .index h4, section article {
     width: 301.33333px; }
+  .main-menu {
+    left: 0; }
+    .main-menu .page-header {
+      margin-bottom: 24px; }
+      .main-menu .page-header .logo {
+        height: auto; }
+        .main-menu .page-header .logo img.logo-n {
+          display: block; }
+      .main-menu .page-header nav .menu-trigger {
+        margin-left: 331.33333px; }
+    .main-menu .menu article {
+      width: 301.33333px; }
+    .main-menu .newsletter {
+      margin-left: 0;
+      float: none !important; }
+    .main-menu .news {
+      float: none !important;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 24px; }
   .page-header {
     margin-top: 2px; }
     .page-header .logo {
-      width: 100%; }
+      width: 100%;
+      height: auto; }
       .page-header .logo img.logo-n {
         width: 100%;
-        top: 2px; }
+        top: 2px;
+        display: none; }
       .page-header .logo img#logo-mob {
         display: block; }
-      .page-header .logo img:not(#logo-mob) {
-        display: none; }
       .page-header .logo img.logo-nomus {
         width: 100%; }
     .page-header nav {
@@ -1212,8 +1236,6 @@ img {
           .page-header nav div.slogan .menu-trigger a {
             background-image: url(../images/mt-mob.svg);
             margin-top: -2px; }
-  .main-menu {
-    padding-top: 180px; }
   .highlight {
     display: none; }
   .bricks-container-header {

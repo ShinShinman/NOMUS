@@ -102,6 +102,11 @@ em {
 	font-family: 'Social';
 }
 
+.stop-scrolling {
+	height: 100vh;
+  overflow: hidden;
+}
+
 img {
 	vertical-align: bottom;
 }
