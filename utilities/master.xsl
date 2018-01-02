@@ -88,11 +88,10 @@
 							var state = slogan.css('position');
 
 							if(st <xsl:text disable-output-escaping="yes">&gt;</xsl:text> or <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> state == 'relative') {
-								var posX = slogan.position().left;
+								// var posX = slogan.position().left; już nie potrzebne
 								slogan.css({
 									position: 'fixed',
-									top: topOffset,
-									left: posX
+									top: topOffset
 								});
 							} else if (st <xsl:text disable-output-escaping="yes">&lt;</xsl:text>= or <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> state == 'fixed'){
 								slogan.css({
@@ -109,7 +108,6 @@
 						var mainMenu = $('.main-menu');
 						var body = $('body');
 						var mainMenuExtended = false;
-						console.log(menuTrigger);
 
 						function mainMenuToggle() {
 							if (mainMenuExtended) {
