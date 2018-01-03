@@ -63,13 +63,7 @@
 						</li>
 						<!--<li class="mailto"><h4><a href="mailto:nomus@gda.pl">nomus@gda.pl</a></h4></li>-->
 					</ul>
-					<ul class="news">
-						<li><h3><a href="{$root}/">Aktualności</a></h3></li>
-						<li><h3><a href="{$root}/{//current-language/@handle}/zbiory/">Zbiory</a></h3></li>
-						<li><h3><a href="{$root}/{//current-language/@handle}/o-nas/">O nas</a></h3></li>
-						<li><h3><a href="{$root}/{//current-language/@handle}/blog/nomus-manifest/">Manifest</a></h3></li>
-						<li><h3><a href="{$root}/{//current-language/@handle}/kontakt/">Kontakt</a></h3></li>
-					</ul>
+					<xsl:call-template name="pages" />
 					<ul class="media">
 						<li><h3><a href="https://www.facebook.com/nomus.gd/" target="_blank">Facebook</a></h3></li>
 						<li><h3><a href="https://twitter.com/nomus_gdansk/" target="_blank">Twitter</a></h3></li>
@@ -77,30 +71,32 @@
 						<li><h3><a href="https://vimeo.com/nomus/" target="_blank">Vimeo</a></h3></li>
 						<li><h3><a href="https://issuu.com/nomus_gdansk/" target="_blank">Issuu</a></h3></li>
 					</ul>
-					
-					<!--
-					<ul>
-						<li><h5><a href="#">Blog</a></h5></li>
-						<li><h5><a href="#">Kolekcja</a></h5></li>
-						<li><h5><a href="#">Edukacja</a></h5></li>
-						<li><h5><a href="#">Wystawy</a></h5></li>
-					</ul>
-					-->
-					<!--
-					<ul>
-						<li><h4><a href="{$root}/{//current-language/@handle}/zbiory/">Zbiory</a></h4></li>
-						<li><h5><a href="#">Artyści</a></h5></li>
-						<li><h5><a href="#">Nasze tagi</a></h5></li>
-						<li><h5><a href="#">Wyszukiwarka</a></h5></li>
-					</ul>
-					<ul>
-						<li><h4><a href="{$root}/{//current-language/@handle}/o-nas/">O nas</a></h4></li>
-						<li><h4><a href="{$root}/{//current-language/@handle}/kontakt/">Kontakt</a></h4></li>
-					</ul>
-				-->
 				</article>
 			</section>
 		</div>
+	</xsl:template>
+
+	<xsl:template name="pages">
+		<xsl:choose>
+			<xsl:when test="//current-language/@handle = 'pl'">
+				<ul class="pages">
+					<li><h3><a href="{$root}/">Aktualności</a></h3></li>
+					<li><h3><a href="{$root}/{//current-language/@handle}/zbiory/">Zbiory</a></h3></li>
+					<li><h3><a href="{$root}/{//current-language/@handle}/o-nas/">O nas</a></h3></li>
+					<li><h3><a href="{$root}/{//current-language/@handle}/blog/nomus-manifest/">Manifest</a></h3></li>
+					<li><h3><a href="{$root}/{//current-language/@handle}/kontakt/">Kontakt</a></h3></li>
+				</ul>
+			</xsl:when>
+			<xsl:otherwise>
+				<ul class="pages">
+					<li><h3><a href="{$root}/">News</a></h3></li>
+					<li><h3><a href="{$root}/{//current-language/@handle}/collection/">Collection</a></h3></li>
+					<li><h3><a href="{$root}/{//current-language/@handle}/about-us/">About us</a></h3></li>
+					<li><h3><a href="{$root}/{//current-language/@handle}/blog/nomus-manifest/">Manifesto</a></h3></li>
+					<li><h3><a href="{$root}/{//current-language/@handle}/contact/">Contact</a></h3></li>
+				</ul>	
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 </xsl:stylesheet>
