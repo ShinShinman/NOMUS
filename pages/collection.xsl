@@ -41,7 +41,7 @@
 
 <xsl:template name="collection">
 	<section class="top-offset section-header">
-		<h1>Zbiory</h1>
+		<h1><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></h1>
 		<xsl:call-template name="navigation-collection" />
 	</section>
 	<section class="bricks-container">
