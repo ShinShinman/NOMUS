@@ -599,7 +599,8 @@ section:last-of-type {
           width: 30px;
           position: absolute;
           top: 0;
-          right: 0; }
+          right: 0;
+          cursor: pointer; }
   .main-menu .menu article {
     margin-top: 24px;
     margin-left: auto;

@@ -49,20 +49,7 @@
 			-->
 			<section class="menu">
 				<article>
-					<ul class="newsletter">
-						<li>
-							<form action="https://gda.us17.list-manage.com/subscribe/post?u=c6a57201c76eaa020f0a3c76a&amp;id=60e894667d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
-								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Newsletter" autocomplete="off" />
-								<div id="mce-responses" class="clear">
-									<div class="response" id="mce-error-response" style="display:none"></div>
-									<div class="response" id="mce-success-response" style="display:none"></div>
-								</div>
-								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c6a57201c76eaa020f0a3c76a_60e894667d" tabindex="-1" value="" /></div>
-								<input type="submit" value="→" name="subscribe" id="mc-embedded-subscribe" />
-							</form>
-						</li>
-						<!--<li class="mailto"><h4><a href="mailto:nomus@gda.pl">nomus@gda.pl</a></h4></li>-->
-					</ul>
+					<xsl:call-template name="newsletter" />
 					<xsl:call-template name="pages" />
 					<ul class="media">
 						<li><h3><a href="https://www.facebook.com/nomus.gd/" target="_blank">Facebook</a></h3></li>
@@ -74,6 +61,44 @@
 				</article>
 			</section>
 		</div>
+	</xsl:template>
+
+	<xsl:template name="newsletter">
+		<xsl:choose>
+			<xsl:when test="//current-language/@handle = 'pl'">
+				<ul class="newsletter">
+					<li>
+						<form action="https://gda.us17.list-manage.com/subscribe/post?u=c6a57201c76eaa020f0a3c76a&amp;id=d0fd0c619d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
+							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Newsletter" autocomplete="off" />
+							<input type="hidden" name="group[3769][2]" value="1" />
+							<div id="mce-responses" class="clear">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div>
+							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c6a57201c76eaa020f0a3c76a_d0fd0c619d" tabindex="-1" value="" /></div>
+							<input type="submit" value="→" name="subscribe" id="mc-embedded-subscribe" />
+						</form>
+					</li>
+					<!--<li class="mailto"><h4><a href="mailto:nomus@gda.pl">nomus@gda.pl</a></h4></li>-->
+				</ul>
+			</xsl:when>
+			<xsl:otherwise>
+				<ul class="newsletter">
+					<li>
+						<form action="https://gda.us17.list-manage.com/subscribe/post?u=c6a57201c76eaa020f0a3c76a&amp;id=d4c53579a9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
+							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Newsletter" autocomplete="off" />
+							<input type="hidden" name="group[3781][1]" value="1" />
+							<div id="mce-responses" class="clear">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div>
+							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c6a57201c76eaa020f0a3c76a_d4c53579a9" tabindex="-1" value="" /></div>
+							<input type="submit" value="→" name="subscribe" id="mc-embedded-subscribe" />
+						</form>
+					</li>
+				</ul>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template name="pages">

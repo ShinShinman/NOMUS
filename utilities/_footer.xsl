@@ -35,13 +35,14 @@
 	<xsl:template name="footer-pl">
 		<footer>
 			<section class="newsletter">
-				<form action="https://gda.us17.list-manage.com/subscribe/post?u=c6a57201c76eaa020f0a3c76a&amp;id=60e894667d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
+				<form action="https://gda.us17.list-manage.com/subscribe/post?u=c6a57201c76eaa020f0a3c76a&amp;id=d0fd0c619d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
 					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Prenumeruj newsletter NOMUS" />
+					<input type="hidden" name="group[3769][2]" value="1" />
 					<div id="mce-responses" class="clear">
 						<div class="response" id="mce-error-response" style="display:none"></div>
 						<div class="response" id="mce-success-response" style="display:none"></div>
 					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c6a57201c76eaa020f0a3c76a_60e894667d" tabindex="-1" value="" /></div>
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c6a57201c76eaa020f0a3c76a_d0fd0c619d" tabindex="-1" value="" /></div>
 					<input type="submit" value="→" name="subscribe" id="mc-embedded-subscribe" />
 				</form>
 			</section>
