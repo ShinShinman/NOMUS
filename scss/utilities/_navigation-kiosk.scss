@@ -1,0 +1,26 @@
+///// NAVIGATION: KIOSK /////
+
+.section-header {
+	h1 {
+		text-align: center;
+	}
+	nav.kiosk-navigation {
+		border-top: solid 3px;
+		margin-bottom: $global-margin-bottom;
+		li {
+			width: grid-columns(4);
+			margin-right: $gutter;
+			text-align: center; // usunąć po dodaniu wyszukiwarki
+			&:first-of-type {
+				text-align: left;
+			}
+			&:last-of-type {
+				text-align: right;
+				margin-right: -30px;
+				///// TMP /////
+				//width: 330px;
+				///// TMP /////
+			}
+		}
+	}
+}

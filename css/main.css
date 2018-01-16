@@ -700,6 +700,22 @@ section:last-of-type {
       text-align: right;
       margin-right: -30px; }
 
+.section-header h1 {
+  text-align: center; }
+
+.section-header nav.kiosk-navigation {
+  border-top: solid 3px;
+  margin-bottom: 24px; }
+  .section-header nav.kiosk-navigation li {
+    width: 301.33333px;
+    margin-right: 30px;
+    text-align: center; }
+    .section-header nav.kiosk-navigation li:first-of-type {
+      text-align: left; }
+    .section-header nav.kiosk-navigation li:last-of-type {
+      text-align: right;
+      margin-right: -30px; }
+
 .highlight {
   margin-top: 370px;
   margin-bottom: 24px;
@@ -741,7 +757,7 @@ section:last-of-type {
     .bricks-container .brick.collection a:hover {
       color: #d7cc60; }
     .bricks-container .brick.blog a:hover {
-      color: #58b918; }
+      color: #1ed875; }
     .bricks-container .brick.exhibitions a:hover {
       color: #9a8fca; }
     .bricks-container .brick a:hover img {
@@ -762,7 +778,7 @@ section:last-of-type {
       text-transform: uppercase;
       margin-bottom: 0; }
       .bricks-container .brick .category.blog {
-        color: #58b918; }
+        color: #1ed875; }
       .bricks-container .brick .category.education {
         color: #4978d7; }
       .bricks-container .brick .category.collection {
@@ -786,6 +802,52 @@ section:last-of-type {
     display: block;
     width: 100%;
     margin-bottom: 12px; }
+
+.bricks-container article {
+  margin-left: 0; }
+
+.bricks-container .kiosk-brick {
+  width: 218.5px;
+  margin-bottom: 24px; }
+  .bricks-container .kiosk-brick h1 {
+    font-size: 21px;
+    font-weight: bold; }
+  .bricks-container .kiosk-brick h2 {
+    font-size: 18px;
+    font-weight: normal; }
+  .bricks-container .kiosk-brick img {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px; }
+  .bricks-container .kiosk-brick .price {
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 0; }
+
+.kiosk-button {
+  float: right;
+  color: white;
+  padding: 0 10px;
+  line-height: 1;
+  border-radius: 2px;
+  background-color: #1ed875;
+  border: solid 1px #1ed875; }
+  .kiosk-button:hover {
+    color: #1ed875;
+    background-color: transparent;
+    border: solid 1px #1ed875; }
+
+.search-box form {
+  width: 632.66667px;
+  margin-left: auto;
+  margin-right: auto; }
+  .search-box form input {
+    outline: none;
+    border: none;
+    border-bottom: solid 1px black;
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.5; }
 
 footer {
   background-color: black;
@@ -900,7 +962,7 @@ footer {
     margin-bottom: 0;
     text-transform: uppercase; }
     .entry .category.blog {
-      color: #58b918; }
+      color: #1ed875; }
     .entry .category.education {
       color: #4978d7; }
     .entry .category.exhibitions {
@@ -1031,6 +1093,51 @@ section.collection-item header:not(.logo) {
     font-size: 24px;
     line-height: 1.5; }
 
+a:hover {
+  color: #1ed875; }
+
+header {
+  margin-bottom: 24px; }
+
+section.kiosk-item article {
+  margin-left: 0;
+  width: 881.16667px;
+  margin-bottom: 30px; }
+  section.kiosk-item article h1 {
+    font-size: 36px;
+    line-height: 1;
+    word-spacing: 10000px;
+    margin-bottom: 24px; }
+  section.kiosk-item article h2 {
+    font-size: 24px;
+    margin-bottom: 24px; }
+  section.kiosk-item article .kiosk-button {
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 2;
+    letter-spacing: 0.2em;
+    margin-top: 6px; }
+  section.kiosk-item article > div {
+    width: 467px;
+    margin-right: 30px;
+    margin-bottom: 24px; }
+    section.kiosk-item article > div:last-of-type {
+      width: 384.16667px;
+      margin-right: 0; }
+  section.kiosk-item article img {
+    width: 100%; }
+  section.kiosk-item article .gallery-top {
+    margin-bottom: 24px; }
+  section.kiosk-item article .gallery-thumbs .thumbnail {
+    width: 135.66667px;
+    height: 90px;
+    overflow: hidden;
+    margin-right: 30px;
+    margin-bottom: 24px;
+    cursor: pointer; }
+    section.kiosk-item article .gallery-thumbs .thumbnail:nth-of-type(3n+3) {
+      margin-right: 0; }
+
 /*** NOMUS styles ***/
 html {
   overflow-y: scroll;
@@ -1085,10 +1192,10 @@ strong, b {
 em {
   font-style: italic; }
 
-.floater > *, .main-menu .menu article > *, .page-header nav div.slogan > *, .highlight article div > *, footer .footer > *, footer .logos > *, section.collection-item header:not(.logo) > *, section.collection-item header:not(.logo) .gallery-thumbs > * {
+.floater > *, .main-menu .menu article > *, .page-header nav div.slogan > *, .highlight article div > *, footer .footer > *, footer .logos > *, section.collection-item header:not(.logo) > *, section.collection-item header:not(.logo) .gallery-thumbs > *, section.kiosk-item article > *, section.kiosk-item article .gallery-thumbs > * {
   float: left; }
 
-.floater:after, .main-menu .menu article:after, .page-header nav div.slogan:after, .highlight article div:after, footer .footer:after, footer .logos:after, section.collection-item header:not(.logo):after, section.collection-item header:not(.logo) .gallery-thumbs:after {
+.floater:after, .main-menu .menu article:after, .page-header nav div.slogan:after, .highlight article div:after, footer .footer:after, footer .logos:after, section.collection-item header:not(.logo):after, section.collection-item header:not(.logo) .gallery-thumbs:after, section.kiosk-item article:after, section.kiosk-item article .gallery-thumbs:after {
   clear: left;
   content: "";
   display: table; }

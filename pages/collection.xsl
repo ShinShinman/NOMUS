@@ -31,7 +31,7 @@
 			<xsl:apply-templates select="article-collection/entry" />
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:call-template name="collection" />
+			<xsl:call-template name="collection" /> <!-- wczytujemy od razu to! Nie ma wyboru! -->
 		</xsl:otherwise>
 	</xsl:choose>
 	
@@ -50,7 +50,7 @@
 </xsl:template>
 
 <xsl:template match="collection/entry">
-	<article class="collection-brick">
+	<article class="collection-brick"> <!-- To trzeba usunąć na rzecz _collection-brick.xsl -->
 		<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/eksponat/{title/@handle}/">
 			<img src="{$workspace}{images/file/@path}/{images/file/filename}" />
 			<h1><xsl:copy-of select="title/p/node()" /></h1>
@@ -59,7 +59,7 @@
 	</article>
 </xsl:template>
 
-<xsl:template match="article-collection/entry">
+<xsl:template match="article-collection/entry"> <!-- Tego nie ma. Mamy nową stronę do wyświetlania eksponatu. -->
 	<section class="entry">
 		<article>
 			<header>

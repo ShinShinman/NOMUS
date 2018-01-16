@@ -25,23 +25,14 @@
 	<xsl:include href="../utilities/_news.xsl" />
 	<xsl:include href="../utilities/_navigation-collection.xsl" />
 	<xsl:include href="../utilities/_collection-brick.xsl" />
+	<xsl:include href="../utilities/_search-box.xsl" />
 
 	<xsl:template match="data">
 		<section class="top-offset section-header">
 			<h1><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></h1>
 			<xsl:call-template name="navigation-collection" />
 		</section>
-		<section class="collection-search">
-			<form action="" method="get">
-				<input type="text" name="keywords" autocomplete="off" autofocus="autofocus" placeholder="Wyszukaj..." value="{params/url-keywords}" />
-				<!-- <input type="hidden" name="debug" /> -->
-				<!--
-				<input type="hidden" name="sort" value="score-recency" />
-				<input type="hidden" name="per-page" value="10" />
-				<input type="hidden" name="sections" value="articles,comments,categories" />
-				-->
-			</form>
-		</section>
+		<xsl:call-template name="search-box" />
 		<section class="bricks-container">
 			<xsl:apply-templates select="collection-search/entry" />
 		</section>
