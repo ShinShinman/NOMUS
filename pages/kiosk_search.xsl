@@ -39,8 +39,6 @@
 
 <xsl:template match="kiosk-search/entry">
 	<xsl:call-template name="kiosk-brick" />
-	<xsl:call-template name="kiosk-brick" />
-	<xsl:call-template name="kiosk-brick" />
 </xsl:template>
 
 <xsl:template match="data" mode="js">

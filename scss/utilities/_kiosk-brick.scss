@@ -3,6 +3,7 @@
 .bricks-container {
 	article {
 		margin-left: 0;
+		min-height: 280px;
 	}		
 	.kiosk-brick {
 		width: grid-columns(3);
@@ -25,14 +26,20 @@
 			line-height: 1;
 			margin-bottom: 0;
 		}
+		.kiosk-button {
+			position: absolute;
+			top: 188px;
+			right: 0;
+			height: 16px;
+		}
 	}
 }
 
 .kiosk-button {
-	float: right;
+	font-size: 14px;
+	line-height: 1;
 	color: white;
 	padding: 0 10px;
-	line-height: 1;
 	border-radius: 2px;
 	background-color: $green;
 	border: solid 1px $green;

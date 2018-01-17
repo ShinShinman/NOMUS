@@ -24,8 +24,9 @@
 		<article class="kiosk-brick">
 			<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/artykul/{name/@handle}/">
 				<img src="{$workspace}{brick-image/@path}/{brick-image/filename}" />
-				<p class="price"><xsl:value-of select="price" /><span class="kiosk-button">+</span></p>
+				<p class="price"><xsl:value-of select="price" /></p>
 				<h1><xsl:copy-of select="name/node()" /></h1>
+				<div class="kiosk-button">+</div>
 			</a>
 		</article>
 	</xsl:template>

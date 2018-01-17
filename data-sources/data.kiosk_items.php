@@ -39,7 +39,7 @@ class datasourcekiosk_items extends SectionDatasource
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2018-01-16T10:34:25+00:00'
+            'release-date' => '2018-01-17T17:49:12+00:00'
         );
     }
 

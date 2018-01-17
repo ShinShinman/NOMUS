@@ -804,7 +804,8 @@ section:last-of-type {
     margin-bottom: 12px; }
 
 .bricks-container article {
-  margin-left: 0; }
+  margin-left: 0;
+  min-height: 280px; }
 
 .bricks-container .kiosk-brick {
   width: 218.5px;
@@ -823,12 +824,17 @@ section:last-of-type {
     font-size: 14px;
     line-height: 1;
     margin-bottom: 0; }
+  .bricks-container .kiosk-brick .kiosk-button {
+    position: absolute;
+    top: 188px;
+    right: 0;
+    height: 16px; }
 
 .kiosk-button {
-  float: right;
+  font-size: 14px;
+  line-height: 1;
   color: white;
   padding: 0 10px;
-  line-height: 1;
   border-radius: 2px;
   background-color: #1ed875;
   border: solid 1px #1ed875; }
@@ -1106,12 +1112,13 @@ section.kiosk-item article {
   section.kiosk-item article h1 {
     font-size: 36px;
     line-height: 1;
-    word-spacing: 10000px;
+    width: 70%;
     margin-bottom: 24px; }
   section.kiosk-item article h2 {
     font-size: 24px;
     margin-bottom: 24px; }
   section.kiosk-item article .kiosk-button {
+    float: right;
     font-size: 10px;
     text-transform: uppercase;
     line-height: 2;

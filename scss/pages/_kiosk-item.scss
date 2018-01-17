@@ -12,7 +12,7 @@ section.kiosk-item {
 		h1 {
 			font-size: 36px;
 			line-height: 1;
-			word-spacing: 10000px;
+			width: 70%;
 			margin-bottom: $global-margin-bottom;
 		}
 		h2 {
@@ -20,6 +20,7 @@ section.kiosk-item {
 			margin-bottom: $global-margin-bottom;
 		}
 		.kiosk-button {
+			float: right;
 			font-size: 10px;
 			text-transform: uppercase;
 			line-height: 2;
