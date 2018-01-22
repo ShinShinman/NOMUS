@@ -20,6 +20,10 @@ section.kiosk-item {
 			margin-bottom: $global-margin-bottom;
 		}
 		.kiosk-button {
+			///// TMP /////
+			display: block;
+			///// TMP /////
+
 			float: right;
 			font-size: 10px;
 			text-transform: uppercase;

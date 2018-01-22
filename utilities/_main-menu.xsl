@@ -112,6 +112,7 @@
 				<ul class="pages">
 					<li><h3><a href="{$root}/">Aktualności</a></h3></li>
 					<li><h3><a href="{$root}/{//current-language/@handle}/zbiory/">Zbiory</a></h3></li>
+					<li><h3><a href="{$root}/{//current-language/@handle}/kiosk/">Kiosk</a></h3></li>
 					<li><h3><a href="{$root}/{//current-language/@handle}/o-nas/">O nas</a></h3></li>
 					<li><h3><a href="{$root}/{//current-language/@handle}/blog/nomus-manifest/">Manifest</a></h3></li>
 					<li><h3><a href="{$root}/{//current-language/@handle}/kontakt/">Kontakt</a></h3></li>

@@ -1125,6 +1125,7 @@ section.kiosk-item article {
     font-size: 24px;
     margin-bottom: 24px; }
   section.kiosk-item article .kiosk-button {
+    display: block;
     float: right;
     font-size: 10px;
     text-transform: uppercase;
