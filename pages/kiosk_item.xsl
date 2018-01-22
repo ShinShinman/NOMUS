@@ -52,7 +52,7 @@
 				</div>
 				<div>
 					<h1><xsl:value-of select="name" /></h1>
-					<h2><xsl:value-of select="price" /><span class="kiosk-button">Dodaj do koszyka</span></h2>
+					<h2><xsl:value-of select="price" /><a href="mailto:kiosk@nomus.gda.pl?subject=Zamówienie Kiosk NOMUS&amp;body={name}%0D%0ACena jednostkowa: {price}%0D%0AIlość:" class="kiosk-button">Zamów przez email</a></h2>
 					<xsl:copy-of select="description/node()" />
 				</div>
 			</article>

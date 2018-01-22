@@ -831,6 +831,7 @@ section:last-of-type {
     height: 16px; }
 
 .kiosk-button {
+  display: none;
   font-size: 14px;
   line-height: 1;
   color: white;
