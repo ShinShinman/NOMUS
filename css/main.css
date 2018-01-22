@@ -544,7 +544,7 @@ section:last-of-type {
     position: relative; }
     .main-menu .page-header .logo {
       height: 155px; }
-    .main-menu .page-header .menu-trigger {
+    .main-menu .page-header .menu-trigger, .main-menu .page-header .lang-btn {
       margin-left: 828.33333px; }
   .main-menu .newsletter {
     width: 301.33333px;
@@ -559,8 +559,7 @@ section:last-of-type {
         border: 0;
         font-size: 21px;
         line-height: 36px;
-        width: 100%;
-        border-bottom: 2px solid black; }
+        width: 100%; }
         .main-menu .newsletter form input:focus {
           outline: none; }
         .main-menu .newsletter form input[type=email]::-webkit-input-placeholder {
@@ -659,6 +658,13 @@ section:last-of-type {
           text-indent: 100%;
           white-space: nowrap;
           overflow: hidden; }
+      .page-header nav div.slogan .lang-btn {
+        width: 135.66667px;
+        margin-top: 12px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.6; }
     .page-header nav ul.menu {
       display: none;
       width: 715.5px;

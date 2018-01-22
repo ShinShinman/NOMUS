@@ -20,17 +20,22 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+	<xsl:import href="_lang-btn.xsl" />
+
 	<xsl:template name="main-menu">
 		<div class="main-menu">
 			<section class="page-header">
 				<header class="logo">
-					<a href="{$root}"><img src="{$workspace}/images/n-mob.svg" class="logo-n" /></a>
+					<a href="{$root}/{//supported-languages/item[@handle != //current-language/@handle]/@handle}/"><img src="{$workspace}/images/n-mob.svg" class="logo-n" /></a>
 					<img src="{$workspace}/images/nomus.svg" class="logo-nomus" />
 				</header>
 				<nav>
 					<!--<div class="menu-anchor" />-->
 					<div class="slogan">
 						<div class="menu-trigger"><a href="javascript:void(0)">M</a></div>
+						<xsl:call-template name="lang-btn">
+							<xsl:with-param name="lang" select="//current-language/@handle" />
+						</xsl:call-template>
 					</div>
 				</nav>
 			</section>
@@ -69,7 +74,7 @@
 				<ul class="newsletter">
 					<li>
 						<form action="https://gda.us17.list-manage.com/subscribe/post?u=c6a57201c76eaa020f0a3c76a&amp;id=d0fd0c619d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
-							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Newsletter" autocomplete="off" />
+							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Okólnik NOMUS" autocomplete="off" />
 							<input type="hidden" name="group[3769][2]" value="1" />
 							<div id="mce-responses" class="clear">
 								<div class="response" id="mce-error-response" style="display:none"></div>
@@ -114,9 +119,11 @@
 			</xsl:when>
 			<xsl:otherwise>
 				<ul class="pages">
+					<!--
 					<li><h3><a href="{$root}/">News</a></h3></li>
 					<li><h3><a href="{$root}/{//current-language/@handle}/collection/">Collection</a></h3></li>
 					<li><h3><a href="{$root}/{//current-language/@handle}/about-us/">About us</a></h3></li>
+					-->
 					<li><h3><a href="{$root}/{//current-language/@handle}/blog/nomus-manifest/">Manifesto</a></h3></li>
 					<li><h3><a href="{$root}/{//current-language/@handle}/contact/">Contact</a></h3></li>
 				</ul>	

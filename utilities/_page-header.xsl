@@ -20,10 +20,12 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+	<xsl:include href="_lang-btn.xsl" />
+
 	<xsl:template name="page-header">
 		<section class="page-header">
 			<header class="logo">
-				<a href="{$root}"><img src="{$workspace}/images/n.svg" class="logo-n" /><img src="{$workspace}/images/n-mob.svg" id="logo-mob" class="logo-n" /></a>
+				<a href="{$root}/{//supported-languages/item[@handle != //current-language/@handle]/@handle}/"><img src="{$workspace}/images/n.svg" class="logo-n" /><img src="{$workspace}/images/n-mob.svg" id="logo-mob" class="logo-n" /></a>
 				<img src="{$workspace}/images/nomus.svg" class="logo-nomus" />
 			</header>
 			<nav>
@@ -32,6 +34,11 @@
 			<div class="slogan">
 				<img class="tail" src="{$workspace}/images/nms.svg" alt="" />
 				<div class="menu-trigger"><a href="javascript:void(0)">M</a></div>
+				<!--
+				<xsl:call-template name="lang-btn">
+					<xsl:with-param name="lang" select="//current-language/@handle" />
+				</xsl:call-template>
+				-->
 			</div>
 
 			<!--
@@ -63,4 +70,5 @@
 			</nav>
 		</section>
 	</xsl:template>
+
 </xsl:stylesheet>
