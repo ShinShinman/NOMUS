@@ -559,7 +559,8 @@ section:last-of-type {
         border: 0;
         font-size: 21px;
         line-height: 36px;
-        width: 100%; }
+        width: 100%;
+        border-bottom: 2px solid black; }
         .main-menu .newsletter form input:focus {
           outline: none; }
         .main-menu .newsletter form input[type=email]::-webkit-input-placeholder {
