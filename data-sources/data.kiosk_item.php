@@ -24,6 +24,7 @@ class datasourcekiosk_item extends SectionDatasource
     public $dsParamINCLUDEDELEMENTS = array(
         'name: formatted',
         'description: formatted',
+        'basic-info: formatted',
         'price: formatted',
         'category',
         'gallery'
@@ -54,7 +55,7 @@ class datasourcekiosk_item extends SectionDatasource
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2018-01-16T15:15:47+00:00'
+            'release-date' => '2018-01-23T14:34:02+00:00'
         );
     }
 

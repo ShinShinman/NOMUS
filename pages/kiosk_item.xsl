@@ -37,7 +37,7 @@
 
 	<xsl:template match="kiosk-item/entry">
 		<section class="kiosk-item">
-			<article>
+			<header>
 				<div class="gallery">
 					<div class="swiper-container gallery-top">
 						<div class="swiper-wrapper">
@@ -53,8 +53,11 @@
 				<div>
 					<h1><xsl:value-of select="name" /></h1>
 					<h2><xsl:value-of select="price" /><a href="mailto:kiosk@nomus.gda.pl?subject=Zamówienie Kiosk NOMUS&amp;body={name}%0D%0ACena jednostkowa: {price}%0D%0AIlość: 1" class="kiosk-button">Zamów przez email</a></h2>
-					<xsl:copy-of select="description/node()" />
+					<xsl:copy-of select="basic-info/node()" />
 				</div>
+			</header>
+			<article>
+				<xsl:copy-of select="description/node()" />
 			</article>
 			
 		</section>
