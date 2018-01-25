@@ -23,17 +23,11 @@
 
 <xsl:import href="../utilities/master.xsl" />
 <xsl:include href="../utilities/_news.xsl" />
-	<xsl:include href="../utilities/_navigation-collection.xsl" />
+<xsl:include href="../utilities/_navigation-collection.xsl" />
+<xsl:include href="../utilities/_collection-brick.xsl" />
 
 <xsl:template match="data">
-	<xsl:choose>
-		<xsl:when test="$title">
-			<xsl:apply-templates select="article-collection/entry" />
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:call-template name="collection" /> <!-- wczytujemy od razu to! Nie ma wyboru! -->
-		</xsl:otherwise>
-	</xsl:choose>
+	<xsl:call-template name="collection" />
 	
 	<!-- <xsl:call-template name="news" /> -->
 
@@ -50,59 +44,7 @@
 </xsl:template>
 
 <xsl:template match="collection/entry">
-	<article class="collection-brick"> <!-- To trzeba usunąć na rzecz _collection-brick.xsl -->
-		<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/eksponat/{title/@handle}/">
-			<img src="{$workspace}{images/file/@path}/{images/file/filename}" />
-			<h1><xsl:copy-of select="title/p/node()" /></h1>
-			<h2><xsl:value-of select="concat(artist/item/firstname, ' ', artist/item/surname)" /></h2>
-		</a>
-	</article>
-</xsl:template>
-
-<xsl:template match="article-collection/entry"> <!-- Tego nie ma. Mamy nową stronę do wyświetlania eksponatu. -->
-	<section class="entry">
-		<article>
-			<header>
-				<h5 class="category">Zbiory</h5>
-				<h1><xsl:value-of select="title" /></h1>
-				<h3><xsl:copy-of select="subtitle/p/node()" /></h3>
-				<h2><xsl:value-of select="date" /></h2>
-			</header>
-			<xsl:apply-templates select="gallery-tmp" />
-			<xsl:copy-of select="post/node()" />
-		</article>
-	</section>
-
-	<!--
-	<xsl:apply-templates select="partners" />
-	-->
-
-	<xsl:call-template name="news" />
-
-</xsl:template>
-
-<xsl:template match="gallery-tmp">
-	<div class="gallery">
-		<img src="{$workspace}{@path}/{filename}" alt=""/>
-		<p class="image-caption"><xsl:copy-of select="../image-caption/p/node()" /></p>
-	</div>
-</xsl:template>
-
-<xsl:template match="partners">
-	<section class="partners">
-		<article>
-			<h5>Partner</h5>
-			<ul class="inline-list">
-				<xsl:apply-templates select="item" />
-			</ul>
-		</article>
-	</section>
-</xsl:template>
-
-<xsl:template match="partners/item">
-	<li>
-		<a href="link"><img src="{$workspace}{logo/@path}/{logo/filename}" alt=""/></a>
-	</li>
+	<xsl:call-template name="collection-brick" />
 </xsl:template>
 
 <xsl:template match="data" mode="og-tags">
