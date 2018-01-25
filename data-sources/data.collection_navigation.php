@@ -2,9 +2,9 @@
 
 require_once(EXTENSIONS.'/page_lhandles/lib/class.datasource.MultilingualNavigation.php');
 
-class datasourcenavigation_collection extends MultilingualNavigationDatasource
+class datasourcecollection_navigation extends MultilingualNavigationDatasource
 {
-    public $dsParamROOTELEMENT = 'navigation-collection';
+    public $dsParamROOTELEMENT = 'collection-navigation';
     public $dsParamORDER = 'asc';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
@@ -28,13 +28,13 @@ class datasourcenavigation_collection extends MultilingualNavigationDatasource
     public function about()
     {
         return array(
-            'name' => 'Navigation Collection',
+            'name' => 'Collection Navigation',
             'author' => array(
                 'name' => 'Olaf Schindler',
                 'website' => 'http://localhost/nomus.gda.pl',
                 'email' => 'studio@orkana39.pl'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-11-15T22:30:35+00:00'
+            'release-date' => '2018-01-25T14:55:31+00:00'
         );
     }
 
