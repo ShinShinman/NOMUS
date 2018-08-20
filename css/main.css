@@ -761,18 +761,30 @@ section:last-of-type {
     margin-bottom: 48px; }
     .bricks-container .brick.education a:hover {
       color: #4978d7; }
+    .bricks-container .brick.education .cover-image {
+      background-color: #4978d7; }
     .bricks-container .brick.collection a:hover {
       color: #d7cc60; }
+    .bricks-container .brick.collection .cover-image {
+      background-color: #d7cc60; }
     .bricks-container .brick.blog a:hover {
       color: #1ed875; }
+    .bricks-container .brick.blog .cover-image {
+      background-color: #1ed875; }
     .bricks-container .brick.exhibitions a:hover {
       color: #9a8fca; }
-    .bricks-container .brick a:hover img {
+    .bricks-container .brick.exhibitions .cover-image {
+      background-color: #9a8fca; }
+    .bricks-container .brick a:hover .cover-image {
+      background-blend-mode: normal;
       -webkit-filter: grayscale(100%);
               filter: grayscale(100%); }
-    .bricks-container .brick img {
-      display: block;
+    .bricks-container .brick .cover-image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-blend-mode: multiply;
       width: 100%;
+      height: 312px;
       margin-bottom: 24px; }
     .bricks-container .brick h1 {
       font-size: 36px;
