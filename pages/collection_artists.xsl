@@ -106,7 +106,10 @@
 	<xsl:template match="collection-by-artist">
 		<section>
 			<article>
-				<h1><xsl:value-of select="concat(entry/artist/item/firstname, ' ', entry/artist/item/surname)" /></h1>
+				<header>
+					<h1><xsl:value-of select="concat(entry[1]/artist/item/firstname, ' ', entry[1]/artist/item/surname)" />&nbsp;<span class="dates">(<xsl:value-of select="entry[1]/artist/item/date-of-birth" />–<xsl:value-of select="entry[1]/artist/item/date-of-death" />)</span></h1>
+				</header>
+				<xsl:copy-of select="entry[1]/artist/item/bio/node()" />
 			</article>
 		</section>
 		<section class="bricks-container">

@@ -1053,6 +1053,9 @@ a:hover {
     margin-top: 12px;
     margin-bottom: 0; }
 
+.artists .dates {
+  font-size: 24px; }
+
 .tag {
   background-color: #d7cc60;
   border-radius: 2px;

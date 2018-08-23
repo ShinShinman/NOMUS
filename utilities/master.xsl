@@ -47,7 +47,7 @@
 
 				<!-- Place favicon.ico in the root directory -->
 
-				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.9" />
+				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.10" />
 				<xsl:call-template name="ga" />
 			</head>
 			<body class="{$current-page} hyphenate">
@@ -64,7 +64,7 @@
 					<xsl:with-param name="lang" select="//current-language/@handle" />
 				</xsl:call-template>
 
-				<script src="{$workspace}/js/main.min.js?v=0.0.9" ></script>
+				<script src="{$workspace}/js/main.min.js?v=0.0.10" ></script>
 				<script>
 					$(function(){
 
