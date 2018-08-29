@@ -26,9 +26,13 @@
 			<a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/eksponat/{title/@handle}/">
 				<img src="{$workspace}{images/file/@path}/{images/file/filename}" />
 				<h1><xsl:copy-of select="title/p/node()" /></h1>
-				<h2><xsl:value-of select="concat(artist/item/firstname, ' ', artist/item/surname)" /></h2>
+				<xsl:apply-templates select="artist/item" />
 			</a>
 		</article>
+	</xsl:template>
+
+	<xsl:template match="artist/item">
+		<h2><xsl:value-of select="concat(firstname, ' ', surname)" /></h2>
 	</xsl:template>
 
 </xsl:stylesheet>

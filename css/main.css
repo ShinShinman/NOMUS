@@ -813,10 +813,13 @@ section:last-of-type {
   margin-bottom: 24px; }
   .bricks-container .collection-brick h1 {
     font-size: 21px;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-bottom: 6px; }
   .bricks-container .collection-brick h2 {
-    font-size: 18px;
-    font-weight: normal; }
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 0;
+    line-height: 1.2; }
   .bricks-container .collection-brick img {
     display: block;
     width: 100%;
@@ -1080,9 +1083,14 @@ a:hover {
 section.collection-item header:not(.logo) {
   margin-bottom: 30px; }
   section.collection-item header:not(.logo) h1 {
-    font-size: 36px; }
+    font-size: 36px;
+    margin-bottom: 12px; }
   section.collection-item header:not(.logo) h2 {
-    font-size: 24px; }
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 0; }
+    section.collection-item header:not(.logo) h2:last-of-type {
+      margin-bottom: 12px; }
   section.collection-item header:not(.logo) p {
     margin-bottom: 0; }
     section.collection-item header:not(.logo) p.tags {

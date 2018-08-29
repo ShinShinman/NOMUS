@@ -57,7 +57,7 @@
 				</div>
 				<div>
 					<h1><xsl:copy-of select="title/p/node()" /></h1>
-					<h2><a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/artysci/{artist/item/surname/@handle}/"><xsl:value-of select="concat(artist/item/firstname, ' ', artist/item/surname)" /></a></h2>
+					<xsl:apply-templates select="artist/item" />
 					<p><xsl:value-of select="creation-date" /></p>
 					<p><xsl:value-of select="creation-place" /></p>
 					<p><xsl:value-of select="technic" /></p>
@@ -80,6 +80,10 @@
 		<div class="thumbnail">
 			<img src="{$workspace}{@path}/{filename}" alt=""/>
 		</div>
+	</xsl:template>
+	
+	<xsl:template match="artist/item">
+		<h2><a href="{$root}/{//current-language/@handle}/{//plh-page/page/item[@lang = //current-language/@handle]/@handle}/artysci/{surname/@handle}/"><xsl:value-of select="concat(firstname, ' ', surname)" /></a></h2>
 	</xsl:template>
 
 	<xsl:template match="tags">
