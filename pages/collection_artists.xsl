@@ -91,8 +91,12 @@
 
 	<xsl:template match="collection-artists/entry">
 		<article class="artist">
-			<h1><a href="{$root}{$current-path}/{surname/@handle}/"><xsl:value-of select="surname" />, <xsl:value-of select="firstname" /></a>&nbsp;<span class="dates">(<xsl:value-of select="date-of-birth" />–<xsl:value-of select="date-of-death" />)</span></h1>
+			<h1><a href="{$root}{$current-path}/{surname/@handle}/"><xsl:value-of select="surname" />, <xsl:value-of select="firstname" /></a>&nbsp;<xsl:apply-templates select="date-of-birth" /></h1>
 		</article>
+	</xsl:template>
+
+	<xsl:template match="date-of-birth">
+		<span class="dates">(<xsl:value-of select="." />–<xsl:value-of select="../date-of-death" />)</span>
 	</xsl:template>
 
 	<xsl:template match="data" mode="og-tags">
