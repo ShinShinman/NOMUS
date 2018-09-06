@@ -57,9 +57,7 @@
 		</article>
 	</section>
 
-	<!--
 	<xsl:apply-templates select="partners" />
-	-->
 
 </xsl:template>
 
