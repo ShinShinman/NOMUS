@@ -531,6 +531,15 @@ section:last-of-type {
   margin-bottom: 150px; }
 
 /* Utilities */
+.preloader {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white url("../images/preloader.gif") no-repeat center;
+  background-size: 100px 16px;
+  z-index: 10000; }
+
 .main-menu {
   display: none;
   width: 100vw;

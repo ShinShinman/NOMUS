@@ -1,0 +1,10 @@
+///// PRELOADER /////
+.preloader {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: white url($css-images-path + 'preloader.gif') no-repeat center;
+	background-size: 100px 16px;
+	z-index: 10000;
+}

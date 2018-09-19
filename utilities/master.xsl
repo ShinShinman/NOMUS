@@ -27,6 +27,7 @@
 	encoding="UTF-8"
 	indent="yes" />
 
+	<xsl:include href="_preloader.xsl" />
 	<xsl:include href="_main-menu.xsl" />
 	<xsl:include href="_page-header.xsl" />
 	<xsl:include href="_footer.xsl" />
@@ -47,13 +48,15 @@
 
 				<!-- Place favicon.ico in the root directory -->
 
-				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.11" />
+				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.12" />
 				<xsl:call-template name="ga" />
 			</head>
 			<body class="{$current-page} hyphenate">
 				<!--[if lte IE 9]>
 					<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 				<![endif]-->
+
+				<xsl:call-template name="preloader" />
 
 				<xsl:call-template name="main-menu" />
 				<xsl:call-template name="page-header" />
@@ -64,7 +67,7 @@
 					<xsl:with-param name="lang" select="//current-language/@handle" />
 				</xsl:call-template>
 
-				<script src="{$workspace}/js/main.min.js?v=0.0.11" ></script>
+				<script src="{$workspace}/js/main.min.js?v=0.0.12" ></script>
 				<script>
 					$(function(){
 
@@ -127,8 +130,13 @@
 							e.preventDefault();
 							mainMenuToggle();
 						})
-						
 					})
+
+					$(window).on('load', function() {
+						$('.preloader').hide();
+					})
+
+
 				</script>
 
 			<xsl:apply-templates mode="js"/>

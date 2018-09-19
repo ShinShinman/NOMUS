@@ -1,7 +1,7 @@
 {
   "name": "nomus",
-  "version": "0.0.10",
-  "description": "Wyświetlanie biogramów artystów i usunięte stare DS (uwaga)",
+  "version": "0.0.12",
+  "description": "Preloader",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
