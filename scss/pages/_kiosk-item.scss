@@ -1,0 +1,68 @@
+///// KIOSK: ITEM /////
+
+section.kiosk-item {
+	header {
+		@extend .floater;
+
+		margin-left: 0;
+		width: grid-columns(11);
+
+		margin-bottom: $gutter;
+
+		h1 {
+			font-size: 36px;
+			line-height: 1;
+			width: 70%;
+			margin-bottom: $global-margin-bottom;
+		}
+		h2 {
+			font-size: 24px;
+			margin-bottom: $global-margin-bottom;
+		}
+		.kiosk-button {
+			///// TMP /////
+			display: block;
+			///// TMP /////
+
+			float: right;
+			font-size: 10px;
+			text-transform: uppercase;
+			line-height: 2;
+			letter-spacing: 0.2em;
+			margin-top: 6px;
+		}
+		&> div {
+			width: grid-columns(6);
+			margin-right: $gutter;
+			margin-bottom: $global-margin-bottom;
+
+			&:last-of-type {
+				width: grid-columns(5);
+				margin-right: 0;
+			}
+		}
+		img {
+			width: 100%;
+		}
+
+		.gallery-top {
+			margin-bottom: $global-margin-bottom;
+		}
+
+		.gallery-thumbs {
+			@extend .floater;
+			.thumbnail {
+				width: grid-columns(2);
+				height: 90px;
+				overflow: hidden;
+				margin-right: $gutter;
+				margin-bottom: $global-margin-bottom;
+				cursor: pointer;
+
+				&:nth-of-type(3n+3) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

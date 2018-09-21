@@ -1,0 +1,55 @@
+///// KIOSK BRICKS /////
+
+.bricks-container {
+	article {
+		margin-left: 0;
+		min-height: 280px;
+	}		
+	.kiosk-brick {
+		width: grid-columns(3);
+		margin-bottom: $global-margin-bottom;
+		h1 {
+			font-size: 21px;
+			font-weight: bold;
+		}
+		h2 {
+			font-size: 18px;
+			font-weight: normal;
+		}
+		img {
+			display: block;
+			width: 100%;
+			margin-bottom: $global-margin-bottom/2;
+		}
+		.price {
+			font-size: 14px;
+			line-height: 1;
+			margin-bottom: 0;
+		}
+		.kiosk-button {
+			position: absolute;
+			top: 188px;
+			right: 0;
+			height: 16px;
+		}
+	}
+}
+
+.kiosk-button {
+	///// TMP /////
+	display: none;
+	///// TMP /////
+	
+	font-size: 14px;
+	line-height: 1;
+	color: white;
+	padding: 0 10px;
+	border-radius: 2px;
+	background-color: $green;
+	border: solid 1px $green;
+	&:hover {
+		color: $green;
+		background-color: transparent;
+		border: solid 1px $green;
+	}
+}
