@@ -111,12 +111,14 @@
 </xsl:template>
 
 <xsl:template match="data" mode="og-tags">
-	<meta property="og:url" content="{$current-url}" />
+	<meta property="og:url" content="{$current-url}/" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="{//article-blog/entry/title}" />
 	<meta property="og:description" content="{//article-blog/entry/subtitle}" />
 	<meta property="og:image" content="{$root}/image/4/600/315{//article-blog/entry/brick-image/@path}/{//article-blog/entry/brick-image/filename}" />
 	<xsl:apply-templates select="//article-blog/entry/gallery/file" mode="og-image" />
+	<meta property="og:image:width" content="600" /> 
+	<meta property="og:image:height" content="315" />
 </xsl:template>
 
 <xsl:template match="gallery/file" mode="og-image">
