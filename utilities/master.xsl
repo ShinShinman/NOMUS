@@ -27,6 +27,7 @@
 	encoding="UTF-8"
 	indent="yes" />
 
+	<xsl:include href="_preloader.xsl" />
 	<xsl:include href="_main-menu.xsl" />
 	<xsl:include href="_page-header.xsl" />
 	<xsl:include href="_footer.xsl" />
@@ -47,13 +48,15 @@
 
 				<!-- Place favicon.ico in the root directory -->
 
-				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.6" />
+				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.12" />
 				<xsl:call-template name="ga" />
 			</head>
 			<body class="{$current-page} hyphenate">
 				<!--[if lte IE 9]>
 					<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 				<![endif]-->
+
+				<xsl:call-template name="preloader" />
 
 				<xsl:call-template name="main-menu" />
 				<xsl:call-template name="page-header" />
@@ -64,7 +67,7 @@
 					<xsl:with-param name="lang" select="//current-language/@handle" />
 				</xsl:call-template>
 
-				<script src="{$workspace}/js/main.min.js" ></script>
+				<script src="{$workspace}/js/main.min.js?v=0.0.12" ></script>
 				<script>
 					$(function(){
 
@@ -88,11 +91,10 @@
 							var state = slogan.css('position');
 
 							if(st <xsl:text disable-output-escaping="yes">&gt;</xsl:text> or <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> state == 'relative') {
-								var posX = slogan.position().left;
+								// var posX = slogan.position().left; już nie potrzebne
 								slogan.css({
 									position: 'fixed',
-									top: topOffset,
-									left: posX
+									top: topOffset
 								});
 							} else if (st <xsl:text disable-output-escaping="yes">&lt;</xsl:text>= or <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> state == 'fixed'){
 								slogan.css({
@@ -104,8 +106,10 @@
 						}
 
 						//menu triger
-						var menuTrigger = $('.menu-trigger a');
+						var menuTriggerParent = $('.menu-trigger');
+						var menuTrigger = menuTriggerParent.find('a');
 						var mainMenu = $('.main-menu');
+						var body = $('body');
 						var mainMenuExtended = false;
 
 						function mainMenuToggle() {
@@ -113,20 +117,26 @@
 								mainMenuExtended = false;
 								mainMenu.fadeOut();
 								menuTrigger.css('background-position', 'top');
+								body.removeClass('stop-scrolling');
 							} else {
 								mainMenuExtended = true;
 								mainMenu.fadeIn();
 								menuTrigger.css('background-position', 'bottom');
+								body.addClass('stop-scrolling');
 							}
 						}
 
 						menuTrigger.click(function(e) {
 							e.preventDefault();
 							mainMenuToggle();
-							console.log ('CLiCK');
 						})
-						
 					})
+
+					$(window).on('load', function() {
+						$('.preloader').hide();
+					})
+
+
 				</script>
 
 			<xsl:apply-templates mode="js"/>

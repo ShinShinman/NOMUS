@@ -27,7 +27,7 @@
 
 	<xsl:template match="data">
 		<section class="top-offset section-header">
-			<h1>Zbiory</h1>
+			<h1><xsl:value-of select="//plh-page/page/item[@lang = //current-language/@handle]" /></h1>
 			<xsl:call-template name="navigation-collection" />
 		</section>
 		<xsl:choose>
@@ -91,8 +91,12 @@
 
 	<xsl:template match="collection-artists/entry">
 		<article class="artist">
-			<h1><a href="{$root}{$current-path}/{surname/@handle}/"><xsl:value-of select="surname" />, <xsl:value-of select="firstname" /></a>&nbsp;<span class="dates">(<xsl:value-of select="date-of-birth" />–<xsl:value-of select="date-of-death" />)</span></h1>
+			<h1><a href="{$root}{$current-path}/{surname/@handle}/"><xsl:value-of select="surname" />, <xsl:value-of select="firstname" /></a>&nbsp;<xsl:apply-templates select="date-of-birth" /></h1>
 		</article>
+	</xsl:template>
+
+	<xsl:template match="date-of-birth">
+		<span class="dates">(<xsl:value-of select="." />–<xsl:value-of select="../date-of-death" />)</span>
 	</xsl:template>
 
 	<xsl:template match="data" mode="og-tags">
@@ -106,7 +110,10 @@
 	<xsl:template match="collection-by-artist">
 		<section>
 			<article>
-				<h1><xsl:value-of select="concat(entry/artist/item/firstname, ' ', entry/artist/item/surname)" /></h1>
+				<header>
+					<h1><xsl:value-of select="concat(entry[1]/artist/item/firstname, ' ', entry[1]/artist/item/surname)" />&nbsp;<span class="dates">(<xsl:value-of select="entry[1]/artist/item/date-of-birth" />–<xsl:value-of select="entry[1]/artist/item/date-of-death" />)</span></h1>
+				</header>
+				<xsl:copy-of select="entry[1]/artist/item/bio/node()" />
 			</article>
 		</section>
 		<section class="bricks-container">

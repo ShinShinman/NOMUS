@@ -57,9 +57,7 @@
 		</article>
 	</section>
 
-	<!--
 	<xsl:apply-templates select="partners" />
-	-->
 
 </xsl:template>
 
@@ -86,12 +84,14 @@
 	</div>
 </xsl:template>
 
+<!--
 <xsl:template match="gallery-tmp">
 	<div class="gallery">
 		<img src="{$workspace}{@path}/{filename}" alt=""/>
 		<p class="image-caption"><xsl:copy-of select="../image-caption/node()" /></p>
 	</div>
 </xsl:template>
+-->
 
 <xsl:template match="partners">
 	<section class="partners">
@@ -111,11 +111,18 @@
 </xsl:template>
 
 <xsl:template match="data" mode="og-tags">
-	<meta property="og:url" content="{$current-url}" />
+	<meta property="og:url" content="{$current-url}/" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="{//article-blog/entry/title}" />
 	<meta property="og:description" content="{//article-blog/entry/subtitle}" />
-	<meta property="og:image" content="{$root}/image/4/600/315{//article-blog/entry/gallery-tmp/@path}/{//article-blog/entry/gallery-tmp/filename}" />
+	<meta property="og:image" content="{$root}/image/4/600/315{//article-blog/entry/brick-image/@path}/{//article-blog/entry/brick-image/filename}" />
+	<xsl:apply-templates select="//article-blog/entry/gallery/file" mode="og-image" />
+	<meta property="og:image:width" content="600" /> 
+	<meta property="og:image:height" content="315" />
+</xsl:template>
+
+<xsl:template match="gallery/file" mode="og-image">
+	<meta property="og:image" content="{$root}/image/4/600/315{@path}/{filename}" />
 </xsl:template>
 
 <xsl:template match="data" mode="js">

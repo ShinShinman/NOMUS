@@ -15,7 +15,7 @@
 		.logo {
 			height: 155px;
 		}
-		.menu-trigger {
+		.menu-trigger, .lang-btn {
 			margin-left: grid-columns(10) + $gutter;
 		}
 	}
@@ -60,6 +60,7 @@
 					position: absolute;
 					top: 0;
 					right: 0;
+					cursor: pointer;
 			  }
 			}
 		}

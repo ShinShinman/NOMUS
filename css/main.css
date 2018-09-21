@@ -531,6 +531,15 @@ section:last-of-type {
   margin-bottom: 150px; }
 
 /* Utilities */
+.preloader {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white url("../images/preloader.gif") no-repeat center;
+  background-size: 100px 16px;
+  z-index: 10000; }
+
 .main-menu {
   display: none;
   width: 100vw;
@@ -544,7 +553,7 @@ section:last-of-type {
     position: relative; }
     .main-menu .page-header .logo {
       height: 155px; }
-    .main-menu .page-header .menu-trigger {
+    .main-menu .page-header .menu-trigger, .main-menu .page-header .lang-btn {
       margin-left: 828.33333px; }
   .main-menu .newsletter {
     width: 301.33333px;
@@ -599,7 +608,8 @@ section:last-of-type {
           width: 30px;
           position: absolute;
           top: 0;
-          right: 0; }
+          right: 0;
+          cursor: pointer; }
   .main-menu .menu article {
     margin-top: 24px;
     margin-left: auto;
@@ -658,6 +668,13 @@ section:last-of-type {
           text-indent: 100%;
           white-space: nowrap;
           overflow: hidden; }
+      .page-header nav div.slogan .lang-btn {
+        width: 135.66667px;
+        margin-top: 12px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.6; }
     .page-header nav ul.menu {
       display: none;
       width: 715.5px;
@@ -699,6 +716,22 @@ section:last-of-type {
       text-align: right;
       margin-right: -30px; }
 
+.section-header h1 {
+  text-align: center; }
+
+.section-header nav.kiosk-navigation {
+  border-top: solid 3px;
+  margin-bottom: 24px; }
+  .section-header nav.kiosk-navigation li {
+    width: 301.33333px;
+    margin-right: 30px;
+    text-align: center; }
+    .section-header nav.kiosk-navigation li:first-of-type {
+      text-align: left; }
+    .section-header nav.kiosk-navigation li:last-of-type {
+      text-align: right;
+      margin-right: -30px; }
+
 .highlight {
   margin-top: 370px;
   margin-bottom: 24px;
@@ -737,18 +770,30 @@ section:last-of-type {
     margin-bottom: 48px; }
     .bricks-container .brick.education a:hover {
       color: #4978d7; }
+    .bricks-container .brick.education .cover-image {
+      background-color: #4978d7; }
     .bricks-container .brick.collection a:hover {
       color: #d7cc60; }
+    .bricks-container .brick.collection .cover-image {
+      background-color: #d7cc60; }
     .bricks-container .brick.blog a:hover {
-      color: #58b918; }
+      color: #1ed875; }
+    .bricks-container .brick.blog .cover-image {
+      background-color: #1ed875; }
     .bricks-container .brick.exhibitions a:hover {
       color: #9a8fca; }
-    .bricks-container .brick a:hover img {
+    .bricks-container .brick.exhibitions .cover-image {
+      background-color: #9a8fca; }
+    .bricks-container .brick a:hover .cover-image {
+      background-blend-mode: normal;
       -webkit-filter: grayscale(100%);
               filter: grayscale(100%); }
-    .bricks-container .brick img {
-      display: block;
+    .bricks-container .brick .cover-image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-blend-mode: multiply;
       width: 100%;
+      height: 312px;
       margin-bottom: 24px; }
     .bricks-container .brick h1 {
       font-size: 36px;
@@ -761,7 +806,7 @@ section:last-of-type {
       text-transform: uppercase;
       margin-bottom: 0; }
       .bricks-container .brick .category.blog {
-        color: #58b918; }
+        color: #1ed875; }
       .bricks-container .brick .category.education {
         color: #4978d7; }
       .bricks-container .brick .category.collection {
@@ -777,14 +822,70 @@ section:last-of-type {
   margin-bottom: 24px; }
   .bricks-container .collection-brick h1 {
     font-size: 21px;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-bottom: 6px; }
   .bricks-container .collection-brick h2 {
-    font-size: 18px;
-    font-weight: normal; }
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 0;
+    line-height: 1.2; }
   .bricks-container .collection-brick img {
     display: block;
     width: 100%;
     margin-bottom: 12px; }
+
+.bricks-container article {
+  margin-left: 0;
+  min-height: 280px; }
+
+.bricks-container .kiosk-brick {
+  width: 218.5px;
+  margin-bottom: 24px; }
+  .bricks-container .kiosk-brick h1 {
+    font-size: 21px;
+    font-weight: bold; }
+  .bricks-container .kiosk-brick h2 {
+    font-size: 18px;
+    font-weight: normal; }
+  .bricks-container .kiosk-brick img {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px; }
+  .bricks-container .kiosk-brick .price {
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 0; }
+  .bricks-container .kiosk-brick .kiosk-button {
+    position: absolute;
+    top: 188px;
+    right: 0;
+    height: 16px; }
+
+.kiosk-button {
+  display: none;
+  font-size: 14px;
+  line-height: 1;
+  color: white;
+  padding: 0 10px;
+  border-radius: 2px;
+  background-color: #1ed875;
+  border: solid 1px #1ed875; }
+  .kiosk-button:hover {
+    color: #1ed875;
+    background-color: transparent;
+    border: solid 1px #1ed875; }
+
+.search-box form {
+  width: 632.66667px;
+  margin-left: auto;
+  margin-right: auto; }
+  .search-box form input {
+    outline: none;
+    border: none;
+    border-bottom: solid 1px black;
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.5; }
 
 footer {
   background-color: black;
@@ -899,7 +1000,7 @@ footer {
     margin-bottom: 0;
     text-transform: uppercase; }
     .entry .category.blog {
-      color: #58b918; }
+      color: #1ed875; }
     .entry .category.education {
       color: #4978d7; }
     .entry .category.exhibitions {
@@ -964,6 +1065,9 @@ a:hover {
     margin-top: 12px;
     margin-bottom: 0; }
 
+.artists .dates {
+  font-size: 24px; }
+
 .tag {
   background-color: #d7cc60;
   border-radius: 2px;
@@ -988,9 +1092,14 @@ a:hover {
 section.collection-item header:not(.logo) {
   margin-bottom: 30px; }
   section.collection-item header:not(.logo) h1 {
-    font-size: 36px; }
+    font-size: 36px;
+    margin-bottom: 12px; }
   section.collection-item header:not(.logo) h2 {
-    font-size: 24px; }
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 0; }
+    section.collection-item header:not(.logo) h2:last-of-type {
+      margin-bottom: 12px; }
   section.collection-item header:not(.logo) p {
     margin-bottom: 0; }
     section.collection-item header:not(.logo) p.tags {
@@ -1029,6 +1138,53 @@ section.collection-item header:not(.logo) {
     width: 100%;
     font-size: 24px;
     line-height: 1.5; }
+
+a:hover {
+  color: #1ed875; }
+
+header {
+  margin-bottom: 24px; }
+
+section.kiosk-item header {
+  margin-left: 0;
+  width: 881.16667px;
+  margin-bottom: 30px; }
+  section.kiosk-item header h1 {
+    font-size: 36px;
+    line-height: 1;
+    width: 70%;
+    margin-bottom: 24px; }
+  section.kiosk-item header h2 {
+    font-size: 24px;
+    margin-bottom: 24px; }
+  section.kiosk-item header .kiosk-button {
+    display: block;
+    float: right;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 2;
+    letter-spacing: 0.2em;
+    margin-top: 6px; }
+  section.kiosk-item header > div {
+    width: 467px;
+    margin-right: 30px;
+    margin-bottom: 24px; }
+    section.kiosk-item header > div:last-of-type {
+      width: 384.16667px;
+      margin-right: 0; }
+  section.kiosk-item header img {
+    width: 100%; }
+  section.kiosk-item header .gallery-top {
+    margin-bottom: 24px; }
+  section.kiosk-item header .gallery-thumbs .thumbnail {
+    width: 135.66667px;
+    height: 90px;
+    overflow: hidden;
+    margin-right: 30px;
+    margin-bottom: 24px;
+    cursor: pointer; }
+    section.kiosk-item header .gallery-thumbs .thumbnail:nth-of-type(3n+3) {
+      margin-right: 0; }
 
 /*** NOMUS styles ***/
 html {
@@ -1084,10 +1240,10 @@ strong, b {
 em {
   font-style: italic; }
 
-.floater > *, .main-menu .menu article > *, .page-header nav div.slogan > *, .highlight article div > *, footer .footer > *, footer .logos > *, section.collection-item header:not(.logo) > *, section.collection-item header:not(.logo) .gallery-thumbs > * {
+.floater > *, .main-menu .menu article > *, .page-header nav div.slogan > *, .highlight article div > *, footer .footer > *, footer .logos > *, section.collection-item header:not(.logo) > *, section.collection-item header:not(.logo) .gallery-thumbs > *, section.kiosk-item header > *, section.kiosk-item header .gallery-thumbs > * {
   float: left; }
 
-.floater:after, .main-menu .menu article:after, .page-header nav div.slogan:after, .highlight article div:after, footer .footer:after, footer .logos:after, section.collection-item header:not(.logo):after, section.collection-item header:not(.logo) .gallery-thumbs:after {
+.floater:after, .main-menu .menu article:after, .page-header nav div.slogan:after, .highlight article div:after, footer .footer:after, footer .logos:after, section.collection-item header:not(.logo):after, section.collection-item header:not(.logo) .gallery-thumbs:after, section.kiosk-item header:after, section.kiosk-item header .gallery-thumbs:after {
   clear: left;
   content: "";
   display: table; }
@@ -1097,6 +1253,10 @@ em {
 
 .icon {
   font-family: 'Social'; }
+
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden; }
 
 img {
   vertical-align: bottom; }
@@ -1187,17 +1347,37 @@ img {
     width: 301.33333px; }
   .text-column, .artists .index h4, section article {
     width: 301.33333px; }
+  .main-menu {
+    left: 0; }
+    .main-menu .page-header {
+      margin-bottom: 24px; }
+      .main-menu .page-header .logo {
+        height: auto; }
+        .main-menu .page-header .logo img.logo-n {
+          display: block; }
+      .main-menu .page-header nav .menu-trigger {
+        margin-left: 331.33333px; }
+    .main-menu .menu article {
+      width: 301.33333px; }
+    .main-menu .newsletter {
+      margin-left: 0;
+      float: none !important; }
+    .main-menu .news {
+      float: none !important;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 24px; }
   .page-header {
     margin-top: 2px; }
     .page-header .logo {
-      width: 100%; }
+      width: 100%;
+      height: auto; }
       .page-header .logo img.logo-n {
         width: 100%;
-        top: 2px; }
+        top: 2px;
+        display: none; }
       .page-header .logo img#logo-mob {
         display: block; }
-      .page-header .logo img:not(#logo-mob) {
-        display: none; }
       .page-header .logo img.logo-nomus {
         width: 100%; }
     .page-header nav {
@@ -1212,8 +1392,6 @@ img {
           .page-header nav div.slogan .menu-trigger a {
             background-image: url(../images/mt-mob.svg);
             margin-top: -2px; }
-  .main-menu {
-    padding-top: 180px; }
   .highlight {
     display: none; }
   .bricks-container-header {

@@ -34,7 +34,6 @@
 
 <xsl:template match="data" mode="js">
 	<script>
-		console.log('Home');
 
 		window.onload = function () {
 			var msnry = new Masonry( '.bricks-container', {

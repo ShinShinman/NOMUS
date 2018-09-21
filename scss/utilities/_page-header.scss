@@ -54,6 +54,14 @@
 					@include hide-text;
 				}
 			}
+			.lang-btn {
+				width: grid-columns(2);
+				margin-top: $global-margin-bottom/2;
+				text-align: center;
+				font-size: 24px;
+				font-weight: bold;
+				line-height: 1.6;
+			}
 		}
 
 		ul.menu {
