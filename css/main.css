@@ -578,12 +578,6 @@ section:last-of-type {
           font-size: 30px;
           font-weight: bold;
           line-height: 36px; }
-        .main-menu .newsletter form input[type=email]:-ms-input-placeholder {
-          color: black;
-          font-family: "NB-International", sans-serif;
-          font-size: 30px;
-          font-weight: bold;
-          line-height: 36px; }
         .main-menu .newsletter form input[type=email]::-ms-input-placeholder {
           color: black;
           font-family: "NB-International", sans-serif;
@@ -597,8 +591,6 @@ section:last-of-type {
           font-weight: bold;
           line-height: 36px; }
         .main-menu .newsletter form input[type=email]:focus::-webkit-input-placeholder {
-          color: darkgrey; }
-        .main-menu .newsletter form input[type=email]:focus:-ms-input-placeholder {
           color: darkgrey; }
         .main-menu .newsletter form input[type=email]:focus::-ms-input-placeholder {
           color: darkgrey; }
