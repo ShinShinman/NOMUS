@@ -20,11 +20,14 @@
 		&.education {
 			color: $education-color;
 		}
-		&.exhibitions {
-			color: $exhibitions-color;
+		&.exhibition {
+			color: $exhibition-color;
 		}
 		&.collection {
 			color: $collection-color;
+		}
+		&.event {
+			color: $event-color;
 		}
 	}
 

@@ -44,12 +44,20 @@
 				background-color: $blog-color;
 			}
 		}
-		&.exhibitions {
+		&.exhibition {
 			a:hover {
-				color: $exhibitions-color;
+				color: $exhibition-color;
 			}
 			.cover-image {
-				background-color: $exhibitions-color;
+				background-color: $exhibition-color;
+			}
+		}
+		&.event {
+			a:hover {
+				color: $event-color;
+			}
+			.cover-image {
+				background-color: $event-color;
 			}
 		}
 
@@ -93,8 +101,11 @@
 			&.collection {
 				color: $collection-color;
 			}
-			&.exhibitions {
-				color: $exhibitions-color;
+			&.exhibition {
+				color: $exhibition-color;
+			}
+			&.event {
+				color: $event-color;
 			}
 		}
 	}
