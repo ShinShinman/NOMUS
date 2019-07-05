@@ -8,7 +8,7 @@
 		border-top: solid 3px;
 		margin-bottom: $global-margin-bottom;
 		li {
-			width: grid-columns(4);
+			width: grid-columns(6);
 			margin-right: $gutter;
 			text-align: center; // usunąć po dodaniu wyszukiwarki
 			&:first-of-type {
