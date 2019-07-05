@@ -1,7 +1,7 @@
 {
   "name": "nomus",
-  "version": "0.0.12",
-  "description": "Preloader",
+  "version": "1.0.0",
+  "description": "Nowe kategorie",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,5 +23,6 @@
     "masonry-layout": "^4.2.0",
     "normalize-scss": "^7.0.0",
     "swiper": "^4.0.7"
-  }
+  },
+  "dependencies": {}
 }

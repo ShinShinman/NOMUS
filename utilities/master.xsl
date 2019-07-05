@@ -48,13 +48,15 @@
 
 				<!-- Place favicon.ico in the root directory -->
 
-				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=0.0.12" />
+				<link rel="stylesheet" type="text/css" href="{$workspace}/css/main.min.css?v=1.0.0" />
 				<xsl:call-template name="ga" />
 			</head>
 			<body class="{$current-page} hyphenate">
 				<!--[if lte IE 9]>
 					<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 				<![endif]-->
+
+				<!--<div class="dimIt"></div>-->
 
 				<xsl:call-template name="preloader" />
 
@@ -67,7 +69,7 @@
 					<xsl:with-param name="lang" select="//current-language/@handle" />
 				</xsl:call-template>
 
-				<script src="{$workspace}/js/main.min.js?v=0.0.12" ></script>
+				<script src="{$workspace}/js/main.min.js?v=1.0.0" ></script>
 				<script>
 					$(function(){
 
