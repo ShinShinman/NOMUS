@@ -666,6 +666,7 @@ section:last-of-type {
           white-space: nowrap;
           overflow: hidden; }
       .page-header nav div.slogan .lang-btn {
+        display: none;
         width: 135.66667px;
         margin-top: 12px;
         text-align: center;
