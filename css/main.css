@@ -63,8 +63,7 @@ figure {
      * 2. Show the overflow in Edge and IE.
      */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -285,8 +284,7 @@ input {
      */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -336,8 +334,7 @@ fieldset {
      *    `fieldset` elements in all browsers.
      */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   display: table;
   /* 1 */
@@ -572,7 +569,13 @@ section:last-of-type {
         border-bottom: 2px solid black; }
         .main-menu .newsletter form input:focus {
           outline: none; }
-        .main-menu .newsletter form input[type=email]::-webkit-input-placeholder {
+        .main-menu .newsletter form input[type=email]::-moz-placeholder {
+          color: black;
+          font-family: "NB-International", sans-serif;
+          font-size: 30px;
+          font-weight: bold;
+          line-height: 36px; }
+        .main-menu .newsletter form input[type=email]:-ms-input-placeholder {
           color: black;
           font-family: "NB-International", sans-serif;
           font-size: 30px;
@@ -590,7 +593,9 @@ section:last-of-type {
           font-size: 30px;
           font-weight: bold;
           line-height: 36px; }
-        .main-menu .newsletter form input[type=email]:focus::-webkit-input-placeholder {
+        .main-menu .newsletter form input[type=email]:focus::-moz-placeholder {
+          color: darkgrey; }
+        .main-menu .newsletter form input[type=email]:focus:-ms-input-placeholder {
           color: darkgrey; }
         .main-menu .newsletter form input[type=email]:focus::-ms-input-placeholder {
           color: darkgrey; }
@@ -661,6 +666,7 @@ section:last-of-type {
           white-space: nowrap;
           overflow: hidden; }
       .page-header nav div.slogan .lang-btn {
+        display: none;
         width: 135.66667px;
         margin-top: 12px;
         text-align: center;
