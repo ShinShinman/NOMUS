@@ -36,7 +36,7 @@
 		<footer>
 			<section class="newsletter">
 				<form action="https://gda.us17.list-manage.com/subscribe/post?u=c6a57201c76eaa020f0a3c76a&amp;id=d0fd0c619d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
-					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Okólnik NOMUS" />
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Subskrybuj okólnik NOMUS" />
 					<input type="hidden" name="group[3769][2]" value="1" />
 					<div id="mce-responses" class="clear">
 						<div class="response" id="mce-error-response" style="display:none"></div>
@@ -48,10 +48,13 @@
 			</section>
 			<section class="footer">
 					<ul class="office">
-						<li class="label">Biuro projektu</li>
-						<li>Muzeum Narodowe w&nbsp;Gdańsku</li>
-						<li>ul. Toruńska 1</li>
-						<li>80-822 Gdańsk</li>
+						<!-- <li class="label">Biuro projektu</li> -->
+						<!-- <li>Muzeum Narodowe w&nbsp;Gdańsku</li> -->
+						<!-- <li>ul. Toruńska 1</li> -->
+						<!-- <li>80-822 Gdańsk</li> -->
+						<li class="label">Siedziba</li>
+						<li>ul. Jaracza 14</li>
+						<li>80-863 Gdańsk</li>
 					</ul>
 					<ul>
 						<li class="label">NOMUS</li>
@@ -71,7 +74,7 @@
 
 			<section class="logos">
 				<ul class="mng">
-					<li class="label">Oddział Muzeum Narodowego w&nbsp;Gdańsku</li>
+					<li class="label">Dział Muzeum Narodowego w&nbsp;Gdańsku</li>
 					<li><a href="http://mng.bip.gov.pl/" target="_blank"><img src="{$workspace}/images/mng-logo.svg" alt=""/></a></li>
 				</ul>
 				<ul>
