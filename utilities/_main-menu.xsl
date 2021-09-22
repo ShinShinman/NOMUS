@@ -58,10 +58,10 @@
 					<xsl:call-template name="pages" />
 					<ul class="media">
 						<li><h3><a href="https://www.facebook.com/nomus.gd/" target="_blank">Facebook</a></h3></li>
-						<li><h3><a href="https://twitter.com/nomus_gdansk/" target="_blank">Twitter</a></h3></li>
+						<!-- <li><h3><a href="https://twitter.com/nomus_gdansk/" target="_blank">Twitter</a></h3></li> -->
 						<li><h3><a href="https://www.instagram.com/nomus.gdansk/" target="_blank">Instagram</a></h3></li>
 						<li><h3><a href="https://vimeo.com/nomus/" target="_blank">Vimeo</a></h3></li>
-						<li><h3><a href="https://issuu.com/nomus_gdansk/" target="_blank">Issuu</a></h3></li>
+						<!-- <li><h3><a href="https://issuu.com/nomus_gdansk/" target="_blank">Issuu</a></h3></li> -->
 					</ul>
 				</article>
 			</section>
@@ -127,7 +127,7 @@
 					-->
 					<li><h3><a href="{$root}/{//current-language/@handle}/blog/nomus-manifest/">Manifesto</a></h3></li>
 					<li><h3><a href="{$root}/{//current-language/@handle}/contact/">Contact</a></h3></li>
-				</ul>	
+				</ul>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
