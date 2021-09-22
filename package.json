@@ -1,7 +1,7 @@
 {
   "name": "nomus",
-  "version": "1.0.2",
-  "description": "Poprawki Anety, 2021.03",
+  "version": "1.0.3",
+  "description": "Poprawki dla Anety, 22.09.2021",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
